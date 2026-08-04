@@ -1,0 +1,26 @@
+/* ====== ABOUT / SOBRE NOSOTROS ====== */
+.about { padding: 8rem 0; background: var(--color-bg-alt); overflow: hidden; }
+.about-grid {
+  display: grid; grid-template-columns: 1fr;
+  gap: 4rem; align-items: center;
+  max-width: 1400px; margin: 0 auto; padding: 0 2.5rem;
+}
+@media (min-width: 768px) { .about-grid { grid-template-columns: 1fr 1fr; } }
+.about-content { }
+.about-label {
+  font-size: 0.9rem; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--color-primary); margin-bottom: 1rem;
+  display: block;
+}
+h2, .h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800; margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+.about p { font-size: 1.1rem; line-height: 1.7; color: #444; margin-bottom: 1.5rem; }
+.about-image {
+  border-radius: 1.5rem; overflow: hidden;
+  max-width: 450px; margin: 0 auto;
+}
+.about-image img { width: 100%; height: auto; max-height: 400px; object-fit: contain; }

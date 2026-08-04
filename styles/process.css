@@ -1,0 +1,18 @@
+/* ====== PROCESS STEPS ====== */
+.process { padding: 6rem 0; background: var(--color-bg); }
+.process-steps {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 2rem; margin-top: 3rem;
+}
+.process-step {
+  text-align: left; padding: 2.5rem 2rem;
+  border-top: 1px solid #ccc;
+  transition: transform .3s, background .3s;
+}
+.process-step:hover { background: var(--color-bg-alt); }
+.process-step span {
+  font-size: 1rem; font-weight: 600;
+  color: var(--color-text-light); margin-bottom: 1.5rem; display: block;
+}
+h4, .h4 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+.process-step p { font-size: 0.9rem; color: var(--color-text-light); }

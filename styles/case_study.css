@@ -1,0 +1,53 @@
+/* ====== CASE STUDY / PROJECT PAGE ====== */
+.case-hero {
+  position: relative; min-height: 85vh;
+  padding-top: 9rem; padding-bottom: 5rem;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; background: #0a0a0a;
+}
+.case-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.75));
+  z-index: 2;
+}
+.case-hero-gif {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; opacity: 0.65;
+}
+.case-hero-content {
+  position: relative; z-index: 10; text-align: center; color: #fff;
+  max-width: 900px; padding: 0 2rem;
+}
+.case-hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 800; line-height: 1.15; letter-spacing: -1px; margin-bottom: 1.5rem;
+  color: #fff;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.7);
+}
+.case-hero .case-cats {
+  font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 3px; color: var(--color-primary);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+.case-body { padding: 6rem 0; background: var(--color-bg); }
+.case-container { max-width: 900px; margin: 0 auto; padding: 0 2.5rem; }
+h2, .h2 {
+  font-size: 2rem; font-weight: 800;
+  margin-bottom: 1.5rem; letter-spacing: -0.5px;
+}
+.case-container p {
+  font-size: 1.15rem; line-height: 1.8;
+  color: #444; margin-bottom: 1.5rem;
+}
+
+.case-gallery {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.5rem; padding: 4rem 0;
+}
+.case-gallery img {
+  border-radius: 1rem; width: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform .4s;
+}
+.case-gallery img:hover { transform: scale(1.03); }

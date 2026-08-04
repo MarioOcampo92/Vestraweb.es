@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <include src="components/head.html"></include>
+</head>
+<body>
+    <!-- 1. Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="/assets/vestra-logo-gradient.svg" alt="VestraWeb - Agencia de Diseño Web y SEO en Tarragona" style="height: 32px;">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/proyectos">Portafolio</a>
+            <a href="/blog">Blog</a>
+            <a href="/contactar">Contactar</a>
+        </nav>
+        <div class="header-actions">
+            <button class="search-icon-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+            <button class="hamburger-icon-btn" aria-label="Menu" style="display: none; background: none; border: none; color: inherit; cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="burger-icon"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. Hero -->
+    <include src="components/index-hero.html"></include>
+
+    <!-- 4. Three.js Orb & Scroll Section -->
+    <section class="orb-section" id="orb-section">
+        <div class="container orb-grid">
+            <div class="orb-wrapper gs-reveal-left" id="canvas-container" style="width: 100%; height: 400px; position: relative;">
+                <!-- Three.js Canvas will be injected here -->
+            </div>
+            <div class="orb-text gs-reveal-right">
+                <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; color: var(--color-primary); font-weight: 900; line-height: 1.1;">
+                    Desarrollo y diseño web a tu medida en Tarragona
+                </h2>
+                <p style="font-size: 1.2rem;"><strong>¿Tu web no genera los clientes que esperas?</strong> En VestraWeb creamos sitios que combinan diseño magnético con resultados reales: más visitas, más contactos, más ventas.</p>
+                <p style="font-size: 1.1rem; color: var(--color-text-light);">Con más de 7 años especializados en diseño web, desarrollamos experiencias inmersivas, optimizadas para SEO local y preparadas para dominar tu sector.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Empresas -->
+    <section class="empresas">
+        <h3>EMPRESAS QUE HAN TRABAJADO CON NOSOTROS</h3>
+        <div class="empresas-logos">
+            <img src="/assets/boletarium_logo.svg" alt="Boletarium">
+            <img src="/assets/d3a0a3a1-3c73-41ab-83e0-9a60fd4460cc.png" alt="Selva de Sabores" loading="lazy">
+            <img src="/assets/LOGO-JORDINA-ARNAU_HORITZONTAL_72x.webp" alt="Jordina Arnau" loading="lazy">
+            <img src="/assets/image.svg" alt="CRI" loading="lazy">
+            <img src="/assets/40b696d0-fa25-44f0-a040-d770ecc4f803.png" alt="JMJ" loading="lazy">
+            <img src="/assets/JO-BRAND-logo-100x60-1.png" alt="JO BRAND">
+            <img src="/assets/Logo1.png" alt="Siete Mandarinas" loading="lazy">
+            <img src="/assets/logos-web-rita-01-400x120-1.png" alt="La Rita">
+        </div>
+    </section>
+
+    <!-- 6. About -->
+    <section class="about">
+        <div class="about-grid">
+            <div class="about-content">
+                <span class="about-label">Sobre Nosotros</span>
+                <h2>Diseño web Tarragona</h2>
+                <p>Con más de 7 años de experiencia desarrollando proyectos web para empresas en Tarragona y provincia, estamos especializados en crear páginas que no solo se ven bien, sino que generan resultados y atraen clientes.</p>
+            </div>
+            <div class="about-image">
+                <img src="/assets/Group-7.svg" alt="Sobre Nosotros" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Process -->
+    <section class="process">
+        <div class="container">
+            <h2>Nuestro Proceso</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <span>01</span>
+                    <h3>Consultoría y Estrategia</h3>
+                </div>
+                <div class="process-step">
+                    <span>02</span>
+                    <h3>Wireframing y UX/UI</h3>
+                </div>
+                <div class="process-step">
+                    <span>03</span>
+                    <h3>Desarrollo y Lanzamiento</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Services -->
+    <include src="components/index-services.html"></include>
+
+    <!-- 9. Portfolio Carousel -->
+    <include src="components/index-portfolio.html"></include>
+
+    <!-- 10. Contact Form (Home) -->
+    <section class="contact" id="contacto">
+        <h2>Contáctanos</h2>
+        <form class="contact-form" action="/send_mail.php" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="asunto" placeholder="Asunto" required>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+            <button type="submit" class="btn-submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <!-- 13. FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Diseño web con tarifas a medida en Tarragona</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--color-text-light);">Tarifas adaptadas a cualquier proyecto</p>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">¿Cuánto cuesta un diseño web?</div>
+                    <div class="accordion-body"><p>400€ - 2500€ dependiendo del proyecto.</p></div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">¿Cuánto tiempo tarda?</div>
+                    <div class="accordion-body"><p>Entre 2-7 semanas.</p></div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">¿Cómo mejora mi posicionamiento en Google?</div>
+                    <div class="accordion-body"><p>Con técnicas probadas de optimización y estrategia de palabras clave locales.</p></div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">¿Puedo gestionar mi web yo mismo?</div>
+                    <div class="accordion-body"><p>Sí, desarrollamos con gestores de contenido intuitivos para facilitar tu gestión.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Parallax Banner -->
+    <section class="parallax-banner" style="background-image: url('/assets/mokko_parallax-scaled.jpg'); background-attachment: fixed; background-position: center; background-size: cover;">
+        <h2>Más de 7 Años en la Industria</h2>
+    </section>
+
+    <!-- 15. Ticker -->
+    <section class="ticker">
+        <div class="ticker-track">
+            <span>Un diseño web único</span>
+            <span>para tu negocio online</span>
+            <span>Un diseño web único</span>
+            <span>para tu negocio online</span>
+            <span>Un diseño web único</span>
+            <span>para tu negocio online</span>
+            <span>Un diseño web único</span>
+            <span>para tu negocio online</span>
+        </div>
+    </section>
+
+    <!-- 16. Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <h2>¿Tienes una idea? ¡Construyámosla!</h2>
+            <div class="footer-email">
+                <a href="mailto:hello@vestraweb.es">hello@vestraweb.es</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Cookies</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+            <div class="footer-copy">&copy; 2026 VestraWeb. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+
+    <!-- 17. WhatsApp Float -->
+    <a href="https://api.whatsapp.com/send?phone=34687180231" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+        <span>¿Dudas? ¡Escríbenos!</span>
+    </a>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* ====== WHATSAPP FLOAT ====== */
+.whatsapp-float {
+  position: fixed; bottom: 2rem; right: 2rem;
+  background: var(--color-whatsapp); color: #fff;
+  padding: 1rem 1.8rem; border-radius: 9999px;
+  display: flex; align-items: center; gap: 0.6rem;
+  font-weight: 700; font-size: 1rem; z-index: 1000;
+  box-shadow: 0 10px 25px rgba(37,211,102,0.4);
+  transition: transform .3s cubic-bezier(.175,.885,.32,1.275);
+}
+.whatsapp-float:hover { transform: scale(1.05) translateY(-5px); }
+.whatsapp-float svg { flex-shrink: 0; }
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.9rem;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    justify-content: center;
+  }
+  .whatsapp-float span { display: none; }
+}

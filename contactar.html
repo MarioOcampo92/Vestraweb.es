@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <include src="components/head.html"></include>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="/assets/vestra-logo-gradient.svg" alt="VestraWeb - Agencia de Diseño Web y SEO en Tarragona" style="height: 32px;">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/proyectos">Portafolio</a>
+            <a href="/blog">Blog</a>
+            <a href="/contactar">Contactar</a>
+        </nav>
+        <div class="header-actions">
+            <button class="search-icon-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+            <button class="hamburger-icon-btn" aria-label="Menu" style="display: none; background: none; border: none; color: inherit; cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="burger-icon"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Massive Marquee -->
+    <div class="contact-marquee ticker">
+        <div class="ticker-track">
+            <span>VAMOS A TRABAJAR JUNTOS <span class="marquee-circle"></span></span>
+            <span>VAMOS A TRABAJAR JUNTOS <span class="marquee-circle"></span></span>
+            <span>VAMOS A TRABAJAR JUNTOS <span class="marquee-circle"></span></span>
+            <span>VAMOS A TRABAJAR JUNTOS <span class="marquee-circle"></span></span>
+        </div>
+    </div>
+    
+    <!-- Hero -->
+    <section class="contact-hero">
+        <h1 class="gs-reveal">Trabajemos Juntos</h1>
+        <p class="gs-reveal">Cuéntenos qué quiere construir.</p>
+    </section>
+
+    <!-- Contact Body -->
+    <section class="contact-page-body">
+        <div class="contact-grid">
+            <!-- Left: Info -->
+            <div class="contact-info gs-reveal-left">
+                <h2>Hablemos de tu proyecto</h2>
+
+                <div class="contact-info-item">
+                    <h4>Teléfono</h4>
+                    <a href="tel:+34687180231">+34 687 18 02 31</a>
+                </div>
+
+                <div class="contact-info-item">
+                    <h4>WhatsApp</h4>
+                    <a href="https://api.whatsapp.com/send?phone=34687180231" target="_blank">Escríbenos por WhatsApp</a>
+                </div>
+
+                <div class="contact-info-item">
+                    <h4>Ubicación</h4>
+                    <p>Carrer Maestro Serrano, 1, 43820 Calafell, Tarragona, España</p>
+                </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="gs-reveal-right">
+                <form class="contact-page-form" action="/send_mail.php" method="POST">
+                    <div class="form-row">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                    </div>
+                    <input type="text" name="asunto" placeholder="Asunto" required>
+                    <textarea name="mensaje" placeholder="¿Cómo podemos ayudarte?" rows="10" required></textarea>
+                    <button type="submit" class="btn-contact-submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <include src="components/footer.html"></include>
+    <include src="components/whatsapp.html"></include>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

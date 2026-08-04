@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <include src="components/head.html"></include>
+</head>
+<body>
+            <header class="header">
+        <div class="logo">
+            <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="/assets/vestra-logo-gradient.svg" alt="VestraWeb - Agencia de Diseño Web y SEO en Tarragona" style="height: 32px;">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/proyectos">Portafolio</a>
+            <a href="/blog">Blog</a>
+            <a href="/contactar">Contactar</a>
+        </nav>
+        <div class="header-actions">
+            
+            <button class="search-icon-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+            <button class="hamburger-icon-btn" aria-label="Menu" style="display: none; background: none; border: none; color: inherit; cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="burger-icon"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main style="background-color: #fafafa;">
+        <section class="portfolio-hero" style="padding: 120px 0 60px; text-align: center; background: linear-gradient(135deg, #fdfdfd 0%, #f3f4f6 100%);">
+            <div class="container">
+                <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: #111; margin-bottom: 1rem;">Nuestros Proyectos</h1>
+                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">Diseño web a medida, branding corporativo y tiendas online optimizadas para vender.</p>
+                
+                <div class="filters" style="margin-top: 3rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <button class="filter-btn active" data-filter="all" style="padding: 0.5rem 1.5rem; border-radius: 50px; border: none; background: #111; color: #fff; font-weight: 600; cursor: pointer;">Todos</button>
+                    <button class="filter-btn" data-filter="branding" style="padding: 0.5rem 1.5rem; border-radius: 50px; border: 1px solid #ddd; background: #fff; color: #333; font-weight: 600; cursor: pointer;">Branding</button>
+                    <button class="filter-btn" data-filter="corporativa" style="padding: 0.5rem 1.5rem; border-radius: 50px; border: 1px solid #ddd; background: #fff; color: #333; font-weight: 600; cursor: pointer;">Corporativa</button>
+                    <button class="filter-btn" data-filter="diseno-web" style="padding: 0.5rem 1.5rem; border-radius: 50px; border: 1px solid #ddd; background: #fff; color: #333; font-weight: 600; cursor: pointer;">Diseño Web</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-content" style="padding: 60px 0 100px;">
+            <div class="container">
+                <div class="portfolio-grid bento-grid">
+                    <a href="/mellows" class="portfolio-item bento-item" data-category="branding diseno-web ecommerce">
+                        <div class="bento-img-wrapper">
+                            <img src="/assets/diseno-web-tarragona-ecommerce-mellows-1.jpg" alt="Mellows" loading="lazy">
+                        </div>
+                        <div class="bento-info">
+                            <h3>Mellows</h3>
+                            <p>Ecommerce & Branding</p>
+                        </div>
+                    </a>
+                    
+                    <a href="/auarquitectos" class="portfolio-item bento-item" data-category="branding corporativa diseno-web">
+                        <div class="bento-img-wrapper">
+                            <img src="/assets/diseno-web-tarragona-estudio-arquitectura-au-1.jpg" alt="AU Arquitectos" loading="lazy">
+                        </div>
+                        <div class="bento-info">
+                            <h3>AU Arquitectos</h3>
+                            <p>Web Corporativa</p>
+                        </div>
+                    </a>
+
+                    <a href="/jordina-arnau" class="portfolio-item bento-item" data-category="branding diseno-web ecommerce">
+                        <div class="bento-img-wrapper">
+                            <img src="/assets/diseno-web-tarragona-marca-personal-jordina-1.jpg" alt="Jordina Arnau" loading="lazy">
+                        </div>
+                        <div class="bento-info">
+                            <h3>Jordina Arnau</h3>
+                            <p>Marca Personal</p>
+                        </div>
+                    </a>
+
+                    <a href="/compassionate-christmas" class="portfolio-item bento-item" data-category="branding diseno-web ecommerce">
+                        <div class="bento-img-wrapper">
+                            <img src="/assets/diseno-web-tarragona-ong-donaciones-1.jpg" alt="Compassionate Christmas" loading="lazy">
+                        </div>
+                        <div class="bento-info">
+                            <h3>Compassionate</h3>
+                            <p>Donaciones ONG</p>
+                        </div>
+                    </a>
+
+                    <a href="/selva-de-sabores" class="portfolio-item bento-item" data-category="branding diseno-web ecommerce">
+                        <div class="bento-img-wrapper">
+                            <img src="/assets/diseno-web-tarragona-restaurante-selva-1.png" alt="Selva de Sabores" loading="lazy">
+                        </div>
+                        <div class="bento-info">
+                            <h3>Selva Sabores</h3>
+                            <p>Restaurante & Ecommerce</p>
+                        </div>
+                    </a>
+
+                    <a href="/ball-de-lletres" class="portfolio-item bento-item" data-category="branding diseno-web ecommerce">
+                        <div class="bento-img-wrapper">
+                            <img src="/assets/diseno-web-tarragona-asociacion-cultural-1.jpg" alt="Ball de Lletres" loading="lazy">
+                        </div>
+                        <div class="bento-info">
+                            <h3>Ball de Lletres</h3>
+                            <p>Asociación Cultural</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h2>¿Tienes una idea? ¡Construyámosla!</h2>
+            <p><a href="mailto:hello@vestraweb.es">hello@vestraweb.es</a></p>
+            <div class="footer-links">
+                <a href="/">Inicio</a>
+                <a href="/proyectos">Portafolio</a>
+                <a href="/blog">Blog</a>
+            </div>
+            <p class="copyright">&copy; 2026 VestraWeb. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=34687180231" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.3l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.4-186.6 184.4zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    </a>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
+
+

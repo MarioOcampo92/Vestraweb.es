@@ -1,0 +1,31 @@
+/* ====== CONTACT FORM ====== */
+.contact { padding: 8rem 0; background: var(--color-bg); }
+h2, .h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800; text-align: center;
+  margin-bottom: 3rem; letter-spacing: -1px;
+}
+.contact-form {
+  max-width: 600px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 1.2rem;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%; padding: 1rem 1.2rem;
+  border: 1px solid #e5e7eb; border-radius: 0.75rem;
+  font-size: 1rem; font-family: inherit;
+  transition: border-color .2s;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none; border-color: var(--color-primary);
+}
+.contact-form textarea { min-height: 150px; resize: vertical; }
+.btn-submit {
+  background: var(--color-text); color: #fff;
+  padding: 1.1rem 2rem; border: none; border-radius: 9999px;
+  font-size: 1rem; font-weight: 700;
+  transition: transform .3s, box-shadow .3s;
+}
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>\n    <include src="components/head.html"></include>\n</head>
+<body>
+    <!-- 1. Header -->
+
+            <header class="header">
+        <div class="logo">
+            <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="/assets/vestra-logo-gradient.svg" alt="VestraWeb - Agencia de Diseño Web y SEO en Tarragona" style="height: 32px;">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Inicio</a>
+            <a href="/proyectos">Portafolio</a>
+            <a href="/blog">Blog</a>
+            <a href="/contactar">Contactar</a>
+        </nav>
+        <div class="header-actions">
+            
+            <button class="search-icon-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+            <button class="hamburger-icon-btn" aria-label="Menu" style="display: none; background: none; border: none; color: inherit; cursor: pointer;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="burger-icon"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. Hero -->
+    <section class="hero">
+        <video class="hero-video" src="/assets/agencia-de-diseno-web-tarragona.webm" autoplay muted loop playsinline></video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Diseño Web en Tarragona</h1>
+            <a href="#contacto" class="btn-primary">Solicitar Presupuesto Gratis</a>
+        </div>
+    </section>
+
+    <!-- 3. Intro Section -->
+    <section class="intro-section" style="padding-top: 12rem;">
+        <div class="container">
+            <h2 class="intro-title gs-reveal" style="font-size: clamp(2rem, 4vw, 3.5rem); margin-top: 2rem;">Diseño web en Tarragona para que tu negocio hable por ti</h2>
+        </div>
+    </section>
+
+    <!-- 4. Spectacular Three.js Orb & Awwwards Scroll Section -->
+    <section class="orb-section" id="orb-section">
+        <div class="container orb-grid">
+            <div class="orb-wrapper gs-reveal-left" id="canvas-container" style="width: 100%; height: 400px; position: relative;">
+                <!-- Three.js Canvas will be injected here -->
+            </div>
+            <div class="orb-text gs-reveal-right">
+                <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; color: var(--color-primary); font-weight: 900; line-height: 1.1;">
+                    Desarrollo y diseño web a tu medida en Tarragona
+                </h2>
+                <p style="font-size: 1.2rem;"><strong>¿Tu web no genera los clientes que esperas?</strong> En VestraWeb creamos sitios que combinan diseño magnético con resultados reales: más visitas, más contactos, más ventas.</p>
+                <p style="font-size: 1.1rem; color: var(--color-text-light);">Con más de 7 años especializados en diseño web, desarrollamos experiencias inmersivas, optimizadas para SEO local y preparadas para dominar tu sector.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Empresas -->
+    <section class="empresas">
+        <h3>EMPRESAS QUE HAN TRABAJADO CON NOSOTROS</h3>
+        <div class="empresas-logos">
+            <img src="/assets/boletarium_logo.svg" alt="Boletarium">
+            <img src="/assets/d3a0a3a1-3c73-41ab-83e0-9a60fd4460cc.png" alt="Selva de Sabores" loading="lazy">
+            <img src="/assets/LOGO-JORDINA-ARNAU_HORITZONTAL_72x.webp" alt="Jordina Arnau" loading="lazy">
+            <img src="/assets/image.svg" alt="CRI" loading="lazy">
+            <img src="/assets/40b696d0-fa25-44f0-a040-d770ecc4f803.png" alt="JMJ" loading="lazy">
+            <img src="/assets/JO-BRAND-logo-100x60-1.png" alt="JO BRAND">
+            <img src="/assets/Logo1.png" alt="Siete Mandarinas" loading="lazy">
+            <img src="/assets/logos-web-rita-01-400x120-1.png" alt="La Rita">
+        </div>
+    </section>
+
+    <!-- 6. About -->
+    <section class="about">
+        <div class="about-grid">
+            <div class="about-content">
+                <span class="about-label">Sobre Nosotros</span>
+                <h2>Diseño web Tarragona</h2>
+                <p>Con más de 7 años de experiencia desarrollando proyectos web para empresas en Tarragona y provincia, estamos especializados en crear páginas que no solo se ven bien, sino que generan resultados y atraen clientes.</p>
+            </div>
+            <div class="about-image">
+                <img src="/assets/Group-7.svg" alt="Sobre Nosotros" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6.5 Team -->
+    <section class="team-section" style="display: none; padding: 2rem 0 6rem; background: var(--color-bg-alt);">
+        <div class="container">
+            <h2>Fundadores</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="/assets/diseno-web-tarragona-ceo-mario-ocampo.jpg" alt="Mario Ocampo - CEO de VestraWeb Agencia SEO en Tarragona" loading="lazy">
+                    </div>
+                    <h3>Mario Ocampo</h3>
+                    <p>CEO & Desarrollador Full-Stack (Python, IA & Web)</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="/assets/diseno-web-tarragona-cto-john-gonzalez.jpg" alt="John Gonzalez - CTO de VestraWeb Desarrollo Web en Tarragona" loading="lazy">
+                    </div>
+                    <h3>John González</h3>
+                    <p>CTO & Desarrollador Web y Móvil (JS, React & Node)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 7. Process -->
+    <section class="process">
+        <div class="container">
+            <h2>Nuestro Proceso</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <span>01</span>
+                    <h3>Consultoría y Estrategia</h3>
+                </div>
+                <div class="process-step">
+                    <span>02</span>
+                    <h3>Wireframing y UX/UI</h3>
+                </div>
+                <div class="process-step">
+                    <span>03</span>
+                    <h3>Desarrollo y Lanzamiento</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Services (3D Hover Cards) -->
+    <section class="services">
+        <div class="container">
+            <h2>Desarrollo web profesional, prestamos servicio a tu medida</h2>
+            <p class="services-subtitle">¿Qué puedo hacer por tu negocio en Tarragona?</p>
+            
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon" style="color: var(--color-primary);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h4>Diseño web a medida</h4>
+                        <p>Webs ultra-rápidas, personalizadas y escalables creadas desde cero para convertir.</p>
+                        <a href="#contacto" class="service-link">Saber más &rarr;</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon" style="color: var(--color-primary);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                        </div>
+                        <h4>Diseño de marca / Premium</h4>
+                        <p>Experiencias visuales inmersivas y animaciones avanzadas para marcas líderes.</p>
+                        <a href="#contacto" class="service-link">Saber más &rarr;</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="service-card-inner">
+                        <div class="service-icon" style="color: var(--color-primary);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                        </div>
+                        <h4>SEO y Posicionamiento</h4>
+                        <p>Auditoría SEO, optimización on-page y estrategias para dominar Google a nivel local.</p>
+                        <a href="#contacto" class="service-link">Saber más &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Unified Projects Carousel (Three.js WebGL effects) -->
+    <section class="unified-projects" id="portafolio-section">
+        <div class="unified-projects-header">
+            <h2>Nuestros Proyectos Web en Tarragona</h2>
+            <p>Descubre nuestro trabajo en diseño y desarrollo web profesional.</p>
+        </div>
+        <div class="unified-carousel-container" style="position:relative">
+                      
+<div class="unified-carousel-track">
+                <!-- Project 1 -->
+                <a href="/mellows" class="unified-card">
+                    <div class="unified-img-wrapper">
+                        <img src="/assets/diseno-web-tarragona-ecommerce-mellows-2.jpg"  class="three-js-img" alt="Diseño web a medida y ecommerce en Tarragona para marca de moda Mellows" loading="lazy">
+                    </div>
+                    <div class="unified-info">
+                        <h4>Mellows</h4>
+                        <p>Ecommerce personalizada</p>
+                    </div>
+                </a>
+                <!-- Project 2 -->
+                <a href="/compassionate-christmas" class="unified-card">
+                    <div class="unified-img-wrapper">
+                        <img src="/assets/diseno-web-tarragona-ong-donaciones-1.jpg"  class="three-js-img" alt="Desarrollo web en Tarragona para donaciones y ONG Compassionate Christmas" loading="lazy">
+                    </div>
+                    <div class="unified-info">
+                        <h4>Compassionate Christmas</h4>
+                        <p>Donaciones Ecommerce</p>
+                    </div>
+                </a>
+                <!-- Project 3 -->
+                <a href="/selva-de-sabores" class="unified-card">
+                    <div class="unified-img-wrapper">
+                        <img src="/assets/diseno-web-tarragona-restaurante-selva-1.png"  class="three-js-img" alt="Diseño web premium en Tarragona para restaurante y tienda de alimentación Selva de Sabores" loading="lazy">
+                    </div>
+                    <div class="unified-info">
+                        <h4>Selva de Sabores</h4>
+                        <p>Tienda Online</p>
+                    </div>
+                </a>
+                <!-- Project 4 -->
+                <a href="/auarquitectos" class="unified-card">
+                    <div class="unified-img-wrapper">
+                        <img src="/assets/diseno-web-tarragona-estudio-arquitectura-au-1.jpg"  class="three-js-img" alt="Diseño web y SEO en Tarragona por VestraWeb" loading="lazy">
+                    </div>
+                    <div class="unified-info">
+                        <h4>AU Arquitectos</h4>
+                        <p>Web Corporativa</p>
+                    </div>
+                </a>
+                <!-- Project 5 -->
+                <a href="/jordina-arnau" class="unified-card">
+                    <div class="unified-img-wrapper">
+                        <img src="/assets/diseno-web-tarragona-marca-personal-jordina-1.jpg"  class="three-js-img" alt="Diseño de página web y marca personal en Tarragona para Jordina Arnau" loading="lazy">
+                    </div>
+                    <div class="unified-info">
+                        <h4>Jordina Arnau</h4>
+                        <p>Diseño Estratégico</p>
+                    </div>
+                </a>
+                  <!-- Project 6 -->
+                  <a href="/ball-de-lletres" class="unified-card">
+                      <div class="unified-img-wrapper">
+                          <img src="/assets/diseno-web-tarragona-asociacion-cultural-1.jpg" class="three-js-img" alt="Ball de Lletres" loading="lazy">
+                      </div>
+                      <div class="unified-info">
+                          <h4>Ball de Lletres</h4>
+                          <p>Asociación Cultural</p>
+                      </div>
+                  </a>
+            </div>
+        </div>
+        <div class="carousel-arrows">
+            <button class="carousel-prev" aria-label="Anterior">&#10094;</button>
+            <button class="carousel-next" aria-label="Siguiente">&#10095;</button>
+        </div>
+        <div class="unified-btn-container">
+            <a href="/proyectos" class="btn-primary" style="background:#000; color:#fff;">Ver Todo el Portafolio</a>
+        </div>
+    </section>
+
+    <!-- 10. Contact -->
+    <section class="contact" id="contacto">
+        <h2>Contáctanos</h2>
+        <form class="contact-form" action="/send_mail.php" method="POST">
+              <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="asunto" placeholder="Asunto" required>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+            <button type="submit" class="btn-submit">Enviar Mensaje</button>
+        </form>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Nuestras webs están desarrolladas con tecnologías modernas (Vite, JS Vainilla) prescindiendo de plantillas pesadas, logrando tiempos de carga inferiores a 1 segundo para el mejor SEO y UX.</p>
+                    </div>
+                </div>
+                <!-- Accordion Item 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                          <span class="accordion-title">Sitios webs editables</span>
+                        <p class="accordion-icon">+</p>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Ofrecemos integraciones con gestores de contenido (CMS) intuitivos para que puedas modificar textos, imágenes y proyectos sin necesidad de saber código.</p>
+                    </div>
+                </div>
+                <!-- Accordion Item 3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                          <span class="accordion-title">Todos mis sitios web incluyen SEO</span>
+                        <p class="accordion-icon">+</p>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Desde la estructura semántica HTML5 hasta la optimización de meta-etiquetas y tiempos de respuesta, construimos bases perfectas para que Google posicione tu web rápidamente.</p>
+                    </div>
+                </div>
+                <!-- Accordion Item 4 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                          <span class="accordion-title">Cumplimiento RGPD y Normativas</span>
+                        <p class="accordion-icon">+</p>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Nos aseguramos de que tu página web cumpla con todas las normativas europeas de protección de datos (RGPD), instalando avisos de cookies y políticas de privacidad correctamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Dise�o web con tarifas a medida en Tarragona</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--color-text-light);">Tarifas adaptadas a cualquier proyecto</p>
+            <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">¿Cuánto cuesta un diseño web?</div>
+                <div class="accordion-body"><p>400� - 2500� dependiendo del proyecto.</p></div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">¿Cuánto tiempo tarda?</div>
+                <div class="accordion-body"><p>Entre 2-7 semanas.</p></div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">¿Cómo mejora mi posicionamiento en Google?</div>
+                <div class="accordion-body"><p>Con técnicas probadas de optimización y estrategia de palabras clave locales.</p></div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">¿Puedo gestionar mi web yo mismo?</div>
+                <div class="accordion-body"><p>Sí, desarrollamos con gestores de contenido intuitivos para facilitar tu gestión.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Parallax Banner -->
+    <section class="parallax-banner" style="background-image: url('/assets/mokko_parallax-scaled.jpg'); background-attachment: fixed; background-position: center; background-size: cover;">
+        <h2>Más de 7 Años en la Industria</h2>
+    </section>
+
+    <!-- 15. Ticker -->
+    <section class="ticker">
+        <div class="ticker-track">
+            <span>Un diseño web único</span>
+            <span>para tu negocio online</span>
+            <span>Un diseño web único</span>
+            <span>para tu negocio online</span>
+            <span>Un diseño web único</span>
+            <span>para tu negocio online</span>
+            <span>Un diseño web único</span>
+            <span>para tu negocio online</span>
+        </div>
+    </section>
+
+    <!-- 16. Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <h2>¿Tienes una idea? ¡Construyámosla!</h2>
+            <div class="footer-email">
+                <a href="mailto:hello@vestraweb.es">hello@vestraweb.es</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Cookies</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+            <div class="footer-copy">&copy; 2026 VestraWeb. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+
+    <!-- 17. WhatsApp Float -->
+    <a href="https://api.whatsapp.com/send?phone=34687180231" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+        <span>¿Dudas? ¡Escríbenos!</span>
+    </a>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

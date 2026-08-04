@@ -1,0 +1,27 @@
+/* ====== FOOTER ====== */
+.footer {
+  padding: 6rem 0 2rem; background: #0a0a0a; color: #fff;
+}
+.footer-inner {
+  max-width: 1400px; margin: 0 auto; padding: 0 2.5rem;
+  text-align: center;
+}
+h2, .h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900; margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+.footer-email {
+  font-size: 1.2rem; color: #aaa; margin-bottom: 3rem;
+}
+.footer-email a { color: #fff; text-decoration: underline; }
+.footer-links {
+  display: flex; justify-content: center; gap: 2rem;
+  margin-bottom: 2rem; flex-wrap: wrap;
+}
+.footer-links a {
+  font-size: 0.9rem; color: #888;
+  transition: color .2s;
+}
+.footer-links a:hover { color: #fff; }
+.footer-copy { font-size: 0.85rem; color: #555; padding-top: 2rem; border-top: 1px solid #222; }

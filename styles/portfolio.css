@@ -1,0 +1,86 @@
+/* ====== UNIFIED PROJECTS CAROUSEL ====== */
+.unified-projects { padding: 6rem 0; background: var(--color-bg); overflow: hidden; }
+.unified-projects-header {
+  text-align: center; margin-bottom: 4rem;
+}
+h2, .h2 {
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 1rem;
+}
+.unified-projects-header p {
+  color: var(--color-text-light); font-size: 1.1rem;
+}
+.unified-carousel-container {
+  width: 100%; overflow-x: auto; padding: 2rem;
+  scrollbar-width: none; /* Firefox */
+}
+.unified-carousel-container::-webkit-scrollbar { display: none; }
+.unified-carousel-track {
+  display: flex; gap: 3rem; width: max-content; margin: 0 auto;
+}
+.unified-card {
+  width: 400px; display: block; border-radius: 1.5rem; overflow: hidden;
+  transition: transform .3s;
+}
+.unified-card:hover { transform: translateY(-10px); }
+.unified-img-wrapper {
+  width: 100%; height: 500px; overflow: hidden; border-radius: 1.5rem;
+  position: relative;
+}
+.unified-img-wrapper img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.unified-info {
+  padding: 1.5rem 0; text-align: left;
+}
+h3, .h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+.unified-info p { font-size: 0.9rem; color: var(--color-text-light); text-transform: uppercase; letter-spacing: 1px; }
+.unified-btn-container { text-align: center; margin-top: 4rem; }
+
+/* ====== RECENT PROJECTS (LOOP GRID) ====== */
+.recent-projects { padding: 8rem 0; background: var(--color-bg); }
+.recent-projects-container { max-width: 1400px; margin: 0 auto; padding: 0 2.5rem; }
+h2, .h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800; text-align: center;
+  margin-bottom: 4rem; letter-spacing: -1px;
+}
+.projects-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 2.5rem;
+}
+.project-card {
+  border-radius: 1.5rem; overflow: hidden;
+  background: var(--color-bg-alt);
+  display: flex; flex-direction: column;
+  transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s;
+  text-decoration: none; color: inherit;
+}
+.project-card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+.project-card img { width: 100%; height: 280px; object-fit: cover; }
+.project-info { padding: 1.5rem 1.8rem 2rem; background: #fff; flex-grow: 1; }
+h3, .h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 0.4rem; color: #111; }
+.project-info p { font-size: 0.9rem; color: var(--color-text-light); }
+
+/* ====== SERVICES ACCORDION (2 COLUMNS) ====== */
+.services-accordion-section {
+  padding: 8rem 0;
+  background: var(--color-bg);
+}
+.services-accordion-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+@media (min-width: 992px) {
+  .services-accordion-grid {
+    grid-template-columns: 380px 1fr;
+  }
+}
+h2, .h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: #000;
+}

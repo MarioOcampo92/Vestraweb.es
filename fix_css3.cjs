@@ -1,0 +1,1 @@
+const fs = require('fs'); let css = fs.readFileSync('style.css', 'utf8'); css = css.replace(/\.\s+h2,\s+\.h2\s+{/g, 'h2, .h2 {'); css = css.replace(/\.\s+h4,\s+\.h4\s+{/g, 'h4, .h4 {'); fs.writeFileSync('style.css', css, 'utf8');

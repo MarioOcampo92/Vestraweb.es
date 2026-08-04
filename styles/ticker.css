@@ -1,0 +1,51 @@
+/* ====== TICKER / MARQUEE ====== */
+.ticker {
+  padding: 4rem 0; overflow: hidden;
+  background: var(--color-bg);
+  white-space: nowrap; display: flex; align-items: center;
+}
+.ticker-track {
+  display: flex; align-items: center; gap: 3rem;
+  padding: 0 2rem;
+  /* Auto scroll animation */
+  animation: scrollMarquee 40s linear infinite;
+}
+.ticker-track span {
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px #d1d5db;
+  transition: color .3s, -webkit-text-stroke .3s;
+}
+.ticker-track span.filled {
+  color: var(--color-text);
+  -webkit-text-stroke: 2px var(--color-text);
+}
+/* Contact specific massive marquee */
+.contact-marquee {
+  background: transparent;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-header-border);
+  margin-top: 6rem;
+}
+.contact-marquee span {
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: var(--color-text);
+  -webkit-text-stroke: 0;
+  display: flex; align-items: center; gap: 2rem;
+  font-weight: 900; letter-spacing: -2px;
+}
+.marquee-circle {
+  display: inline-block;
+  width: clamp(30px, 5vw, 60px);
+  height: clamp(30px, 5vw, 60px);
+  border: 6px solid #b29dff;
+  border-radius: 50%;
+  margin: 0 1rem;
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
