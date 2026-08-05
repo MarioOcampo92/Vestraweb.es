@@ -10,9 +10,9 @@ Redirect 301 /tecnologias-mas-demandadas /blog
 Redirect 301 /tienda-online-tarragona /blog
 
 # Redirect old WordPress page slugs to new static pages
-Redirect 301 /proyectos/ /portafolio.html
-Redirect 301 /portfolio/ /portafolio.html
-Redirect 301 /contacto/ /contactar.html
+Redirect 301 /proyectos/ /portafolio
+Redirect 301 /portfolio/ /portafolio
+Redirect 301 /contacto/ /contactar
 
 # Remove .html extension for cleaner URLs
 RewriteCond %{REQUEST_FILENAME} !-f
