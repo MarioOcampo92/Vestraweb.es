@@ -1,7 +1,30 @@
 import './style.css'
 
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(ScrollTrigger);
+function loadScript(src) {
+  return new Promise(resolve => {
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = resolve;
+    document.body.appendChild(s);
+  });
+}
+
+window.addEventListener('load', () => {
+  setTimeout(async () => {
+    // Dynamically load heavy libraries AFTER the page is fully loaded and painted
+    await loadScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js");
+    await loadScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js");
+    await loadScript("https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js");
+    await loadScript("https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js");
+    
+    // Now initialize everything safely
+    initHeavyAnimations();
+  }, 100);
+});
+
+function initHeavyAnimations() {
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
 
   // ===== HERO ANIMATION =====
   // We use CSS animations for the main hero text to optimize Largest Contentful Paint (LCP)
@@ -384,7 +407,8 @@ document.addEventListener("DOMContentLoaded", () => {
       easing: "cubic-bezier(.03,.98,.52,.99)"
     });
   }
-});
+  } // Close the 'if (typeof gsap !== undefined)' block
+} // Close the initHeavyAnimations function
 
 document.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector('.unified-carousel-container');
