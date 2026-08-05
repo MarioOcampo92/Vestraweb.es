@@ -1,1 +1,0 @@
-const fs = require('fs'); let html = fs.readFileSync('index.html', 'utf8'); html = html.replace(/400.*dependiendo del proyecto\.<\/p><\/div>/g, '400€ - 2500€ dependiendo del proyecto.</p></div>'); fs.writeFileSync('index.html', html, 'utf8');

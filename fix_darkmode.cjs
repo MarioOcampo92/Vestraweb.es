@@ -1,1 +1,0 @@
-const fs = require('fs'); let html = fs.readFileSync('index.html', 'utf8'); html = html.replace(/<button class="dark-mode-icon-btn"[\s\S]*?<\/button>/g, ''); fs.writeFileSync('index.html', html, 'utf8');
