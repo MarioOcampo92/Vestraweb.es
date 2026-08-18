@@ -2,52 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://vestraweb.es/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vestraweb.es/portafolio.html</loc>
-    <lastmod>2026-07-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vestraweb.es/blog.html</loc>
-    <lastmod>2026-07-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vestraweb.es/contactar.html</loc>
-    <lastmod>2026-07-30</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://vestraweb.es/jordina-arnau.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://vestraweb.es/jordina-arnau</loc>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vestraweb.es/mellows.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://vestraweb.es/mellows</loc>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vestraweb.es/selva-de-sabores.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://vestraweb.es/selva-de-sabores</loc>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vestraweb.es/auarquitectos.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://vestraweb.es/auarquitectos</loc>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vestraweb.es/ball-de-lletres.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://vestraweb.es/ball-de-lletres</loc>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vestraweb.es/compassionate-christmas.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://vestraweb.es/compassionate-christmas</loc>
+    <lastmod>2026-08-18</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
