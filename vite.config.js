@@ -52,10 +52,12 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        "aviso-legal": resolve(__dirname, "aviso-legal.html"),
+        "privacidad": resolve(__dirname, "privacidad.html"),
+        "cookies": resolve(__dirname, "cookies.html"),
+        "accesibilidad": resolve(__dirname, "accesibilidad.html"),
         main: resolve(__dirname, 'index.html'),
         portafolio: resolve(__dirname, 'portafolio.html'),
-        proyectos: resolve(__dirname, 'proyectos.html'),
-        blog: resolve(__dirname, 'blog.html'),
         contactar: resolve(__dirname, 'contactar.html'),
         jordinaArnau: resolve(__dirname, 'jordina-arnau.html'),
         mellows: resolve(__dirname, 'mellows.html'),

@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /portafolio
+Disallow: /proyectos
+Disallow: /contactar
+Disallow: /contacto
 
 Sitemap: https://vestraweb.es/sitemap.xml

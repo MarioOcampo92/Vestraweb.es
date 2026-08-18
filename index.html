@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
     <include src="components/head.html"></include>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://vestraweb.es/">
 </head>
 <body>
     <!-- 1. Header -->
@@ -13,8 +15,7 @@
         </div>
         <nav class="nav-links">
             <a href="/">Inicio</a>
-            <a href="/proyectos">Portafolio</a>
-            <a href="/blog">Blog</a>
+            <a href="/portafolio">Portafolio</a>
             <a href="/contactar">Contactar</a>
         </nav>
         <div class="header-actions">
@@ -48,7 +49,7 @@
 
     <!-- 5. Empresas -->
     <section class="empresas">
-        <h3>EMPRESAS QUE HAN TRABAJADO CON NOSOTROS</h3>
+        <div class="h3">EMPRESAS QUE HAN TRABAJADO CON NOSOTROS</div>
         <div class="empresas-logos">
             <img src="/assets/boletarium_logo.svg" alt="Boletarium">
             <img src="/assets/d3a0a3a1-3c73-41ab-83e0-9a60fd4460cc.png" alt="Selva de Sabores" loading="lazy">
@@ -78,7 +79,7 @@
     <!-- 7. Process -->
     <section class="process">
         <div class="container">
-            <h2>Nuestro Proceso</h2>
+            <div class="h2">Nuestro Proceso</div>
             <div class="process-steps">
                 <div class="process-step">
                     <span>01</span>
@@ -104,12 +105,19 @@
 
     <!-- 10. Contact Form (Home) -->
     <section class="contact" id="contacto">
-        <h2>Contáctanos</h2>
+        <div class="h2">Contáctanos</div>
         <form class="contact-form" action="/send_mail.php" method="POST">
             <input type="text" name="nombre" placeholder="Nombre" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="text" name="asunto" placeholder="Asunto" required>
             <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                        <div class="legal-consent" style="margin-bottom: 1.5rem; text-align: left; font-size: 0.65rem; color: var(--color-text-light); line-height: 1.4;">
+                
+                <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" name="legal_accept" required style="margin-top: 0.25rem;">
+                    <span>He leído y acepto la Política de Privacidad.</span>
+                </label>
+            </div>
             <button type="submit" class="btn-submit">Enviar Mensaje</button>
         </form>
     </section>
@@ -119,22 +127,22 @@
         <div class="container">
             <h2>Diseño web con tarifas a medida en Tarragona</h2>
             <p style="text-align: center; margin-bottom: 2rem; color: var(--color-text-light);">Tarifas adaptadas a cualquier proyecto</p>
-            <div class="accordion">
+                        <div class="accordion">
                 <div class="accordion-item">
-                    <div class="accordion-header">¿Cuánto cuesta un diseño web?</div>
-                    <div class="accordion-body"><p>400€ - 2500€ dependiendo del proyecto.</p></div>
+                    <div class="accordion-header">¿Cuánto cuesta el diseño de una página web en Tarragona?</div>
+                    <div class="accordion-body"><p>El precio de un diseño web a medida en Tarragona oscila generalmente entre 400€ para proyectos básicos (como páginas presenciales para autónomos o pymes) y 2500€ para tiendas online o plataformas corporativas más complejas. Cada desarrollo web es único, por lo que adaptamos nuestra estrategia y presupuesto para maximizar el retorno de tu inversión, asegurando siempre una estructura preparada para el posicionamiento web.</p></div>
                 </div>
                 <div class="accordion-item">
-                    <div class="accordion-header">¿Cuánto tiempo tarda?</div>
-                    <div class="accordion-body"><p>Entre 2-7 semanas.</p></div>
+                    <div class="accordion-header">¿Cuánto tiempo tarda el desarrollo web y posicionamiento SEO?</div>
+                    <div class="accordion-body"><p>Para crear una web profesional y optimizada desde cero, los plazos habituales son de 2 a 7 semanas. Este tiempo incluye la consultoría inicial, el diseño UX/UI, la programación de la web, y la implementación de la estructura base de SEO en Tarragona. Entendemos que tu negocio necesita estar online lo antes posible, por lo que garantizamos un flujo de trabajo ágil y reportes constantes de progreso.</p></div>
                 </div>
                 <div class="accordion-item">
-                    <div class="accordion-header">¿Cómo mejora mi posicionamiento en Google?</div>
-                    <div class="accordion-body"><p>Con técnicas probadas de optimización y estrategia de palabras clave locales.</p></div>
+                    <div class="accordion-header">¿Cómo mejora mi posicionamiento SEO en Tarragona y Google?</div>
+                    <div class="accordion-body"><p>El éxito de una página web no solo depende de que sea bonita, sino de que atraiga clientes. Aplicamos técnicas avanzadas de SEO local y auditorías de posicionamiento web en Tarragona para que tu negocio domine los primeros resultados de Google. Optimizamos la velocidad de carga, la estructura de etiquetas, el contenido y el rendimiento en dispositivos móviles (Responsive Design), factores clave para el algoritmo actual.</p></div>
                 </div>
                 <div class="accordion-item">
-                    <div class="accordion-header">¿Puedo gestionar mi web yo mismo?</div>
-                    <div class="accordion-body"><p>Sí, desarrollamos con gestores de contenido intuitivos para facilitar tu gestión.</p></div>
+                    <div class="accordion-header">¿Podré gestionar mi página web yo mismo?</div>
+                    <div class="accordion-body"><p>¡Por supuesto! Como creador de páginas web y especialista en desarrollo, integro gestores de contenido (CMS) muy intuitivos. Una vez finalizado el diseño de tu web en Tarragona, recibirás una capacitación para que puedas modificar textos, subir nuevos servicios, publicar artículos en el blog o gestionar pedidos si es una tienda online, todo ello de forma autónoma y sin tocar una línea de código.</p></div>
                 </div>
             </div>
         </div>
@@ -142,7 +150,7 @@
 
     <!-- 14. Parallax Banner -->
     <section class="parallax-banner" style="background-image: url('/assets/mokko_parallax-scaled.jpg'); background-attachment: fixed; background-position: center; background-size: cover;">
-        <h2>Más de 7 Años en la Industria</h2>
+        <div class="h2">Más de 7 Años en la Industria</div>
     </section>
 
     <!-- 15. Ticker -->
@@ -160,21 +168,7 @@
     </section>
 
     <!-- 16. Footer -->
-    <footer class="footer">
-        <div class="footer-inner">
-            <h2>¿Tienes una idea? ¡Construyámosla!</h2>
-            <div class="footer-email">
-                <a href="mailto:hello@vestraweb.es">hello@vestraweb.es</a>
-            </div>
-            <div class="footer-links">
-                <a href="#">Aviso Legal</a>
-                <a href="#">Privacidad</a>
-                <a href="#">Cookies</a>
-                <a href="#">Accesibilidad</a>
-            </div>
-            <div class="footer-copy">&copy; 2026 VestraWeb. Todos los derechos reservados.</div>
-        </div>
-    </footer>
+    <include src="components/footer.html"></include>
 
     <!-- 17. WhatsApp Float -->
     <a href="https://api.whatsapp.com/send?phone=34687180231" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">

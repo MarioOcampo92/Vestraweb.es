@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <include src="components/head.html"></include>
+    <meta name="robots" content="noindex">
 </head>
 <body>
     <header class="header">
@@ -12,8 +13,7 @@
         </div>
         <nav class="nav-links">
             <a href="/">Inicio</a>
-            <a href="/proyectos">Portafolio</a>
-            <a href="/blog">Blog</a>
+            <a href="/portafolio">Portafolio</a>
             <a href="/contactar">Contactar</a>
         </nav>
         <div class="header-actions">
@@ -47,20 +47,20 @@
         <div class="contact-grid">
             <!-- Left: Info -->
             <div class="contact-info gs-reveal-left">
-                <h2>Hablemos de tu proyecto</h2>
+                <div class="h2">Hablemos de tu proyecto</div>
 
                 <div class="contact-info-item">
-                    <h4>Teléfono</h4>
+                    <div class="h4">Teléfono</div>
                     <a href="tel:+34687180231">+34 687 18 02 31</a>
                 </div>
 
                 <div class="contact-info-item">
-                    <h4>WhatsApp</h4>
+                    <div class="h4">WhatsApp</div>
                     <a href="https://api.whatsapp.com/send?phone=34687180231" target="_blank">Escríbenos por WhatsApp</a>
                 </div>
 
                 <div class="contact-info-item">
-                    <h4>Email</h4>
+                    <div class="h4">Email</div>
                     <a href="mailto:hello@vestraweb.es">hello@vestraweb.es</a>
                 </div>
             </div>
@@ -74,7 +74,14 @@
                     </div>
                     <input type="text" name="asunto" placeholder="Asunto" required>
                     <textarea name="mensaje" placeholder="¿Cómo podemos ayudarte?" rows="10" required></textarea>
-                    <button type="submit" class="btn-contact-submit">Enviar Mensaje</button>
+                                <div class="legal-consent" style="margin-bottom: 1.5rem; text-align: left; font-size: 0.65rem; color: var(--color-text-light); line-height: 1.4;">
+                
+                <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" name="legal_accept" required style="margin-top: 0.25rem;">
+                    <span>He leído y acepto la Política de Privacidad.</span>
+                </label>
+            </div>
+            <button type="submit" class="btn-contact-submit">Enviar Mensaje</button>
                 </form>
             </div>
         </div>
