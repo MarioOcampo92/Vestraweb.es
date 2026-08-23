@@ -60,7 +60,6 @@ if (!html.includes('name="author"')) {
 // Rewrites for Barcelona SEO
 html = html.replace(/Tarragona/g, 'Barcelona');
 html = html.replace(/tarragona/g, 'barcelona');
-// Make sure to add WordPress focus
 html = html.replace(/Diseño web Barcelona/gi, 'Diseño web WordPress en Barcelona');
 html = html.replace(/Desarrollo y diseño web a tu medida en Barcelona/gi, 'Desarrollo y diseño web WordPress a medida en Barcelona');
 html = html.replace(/Diseño web con tarifas a medida en Barcelona/gi, 'Diseño web WordPress con tarifas a medida en Barcelona');
@@ -71,12 +70,11 @@ fs.writeFileSync('diseno-web-wordpress-barcelona.html', html, 'utf8');
 // 2. Build the components
 const components = ['hero', 'portfolio', 'services'];
 for (const comp of components) {
-    let compHtml = fs.readFileSync(\`components/index-\${comp}.html\`, 'utf8');
+    let compHtml = fs.readFileSync(`components/index-${comp}.html`, 'utf8');
     
     compHtml = compHtml.replace(/Tarragona/g, 'Barcelona');
     compHtml = compHtml.replace(/tarragona/g, 'barcelona');
     
-    // Add WordPress semantic flavor
     if (comp === 'hero') {
         compHtml = compHtml.replace(/Diseño Web en Barcelona/gi, 'Diseño Web WordPress en Barcelona');
     }
@@ -85,7 +83,7 @@ for (const comp of components) {
         compHtml = compHtml.replace(/Diseño Web Premium/gi, 'Diseño WordPress Premium');
     }
     
-    fs.writeFileSync(\`components/barcelona-\${comp}.html\`, compHtml, 'utf8');
+    fs.writeFileSync(`components/barcelona-${comp}.html`, compHtml, 'utf8');
 }
 
 // 3. Duplicate local SEO assets
@@ -102,18 +100,18 @@ for (const file of files) {
         }
     }
 }
-console.log(\`Copied \${count} local SEO assets for Barcelona\`);
+console.log(`Copied ${count} local SEO assets for Barcelona`);
 
 // 4. Update Navigation globally
-const oldDropdown = \`<div class="nav-dropdown-content">
+const oldDropdown = `<div class="nav-dropdown-content">
                     <a href="/">Tarragona</a>
                     <a href="/diseno-web-castellon">Castellón</a>
-                </div>\`;
-const newDropdown = \`<div class="nav-dropdown-content">
+                </div>`;
+const newDropdown = `<div class="nav-dropdown-content">
                     <a href="/">Tarragona</a>
                     <a href="/diseno-web-castellon">Castellón</a>
                     <a href="/diseno-web-wordpress-barcelona">Barcelona</a>
-                </div>\`;
+                </div>`;
 
 function processHtmlFiles(dir) {
     const filesList = fs.readdirSync(dir);
@@ -135,21 +133,21 @@ processHtmlFiles(__dirname);
 // Update vite.config.js
 let viteConfig = fs.readFileSync('vite.config.js', 'utf8');
 if (!viteConfig.includes('disenoWebWordpressBarcelona:')) {
-    viteConfig = viteConfig.replace('disenoWebCastellon: resolve(__dirname, \\'diseno-web-castellon.html\\'),', 
-                                  'disenoWebCastellon: resolve(__dirname, \\'diseno-web-castellon.html\\'),\\n        disenoWebWordpressBarcelona: resolve(__dirname, \\'diseno-web-wordpress-barcelona.html\\'),');
+    viteConfig = viteConfig.replace('disenoWebCastellon: resolve(__dirname, \'diseno-web-castellon.html\'),', 
+                                  'disenoWebCastellon: resolve(__dirname, \'diseno-web-castellon.html\'),\n        disenoWebWordpressBarcelona: resolve(__dirname, \'diseno-web-wordpress-barcelona.html\'),');
     fs.writeFileSync('vite.config.js', viteConfig, 'utf8');
 }
 
 // Update sitemap
 let sitemap = fs.readFileSync('public/sitemap.xml', 'utf8');
 if (!sitemap.includes('diseno-web-wordpress-barcelona')) {
-    sitemap = sitemap.replace('</urlset>', \`  <url>
+    sitemap = sitemap.replace('</urlset>', `  <url>
     <loc>https://vestraweb.es/diseno-web-wordpress-barcelona</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-</urlset>\`);
+</urlset>`);
     fs.writeFileSync('public/sitemap.xml', sitemap, 'utf8');
 }
 

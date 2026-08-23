@@ -57,6 +57,7 @@ export default defineConfig({
         "cookies": resolve(__dirname, "cookies.html"),
         "accesibilidad": resolve(__dirname, "accesibilidad.html"),
         disenoWebCastellon: resolve(__dirname, 'diseno-web-castellon.html'),
+        disenoWebWordpressBarcelona: resolve(__dirname, 'diseno-web-wordpress-barcelona.html'),
         main: resolve(__dirname, 'index.html'),
         portafolio: resolve(__dirname, 'portafolio.html'),
         contactar: resolve(__dirname, 'contactar.html'),
