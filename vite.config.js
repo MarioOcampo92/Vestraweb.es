@@ -56,6 +56,7 @@ export default defineConfig({
         "privacidad": resolve(__dirname, "privacidad.html"),
         "cookies": resolve(__dirname, "cookies.html"),
         "accesibilidad": resolve(__dirname, "accesibilidad.html"),
+        desarrolloWebCastellon: resolve(__dirname, 'desarrollo-web-castellon.html'),
         main: resolve(__dirname, 'index.html'),
         portafolio: resolve(__dirname, 'portafolio.html'),
         contactar: resolve(__dirname, 'contactar.html'),
