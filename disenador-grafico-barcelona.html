@@ -1,0 +1,277 @@
+const fs = require('fs');
+
+const brutalistHtml = `<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseñador Gráfico en Barcelona | Mario Ocampo | UI/UX & Code</title>
+    <meta name="description" content="Mario, Diseñador Gráfico en Barcelona y Arquitecto Front-End. Experto en crear experiencias visuales brutales, UI/UX, automatización y desarrollo web avanzado.">
+    <link rel="canonical" href="https://vestraweb.es/disenador-grafico-barcelona">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #09090b;
+            --text: #f4f4f5;
+            --accent-1: #ff2a5f;
+            --accent-2: #00ff9d;
+            --accent-3: #4f46e5;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        ::selection { background: var(--accent-2); color: #000; }
+        
+        /* Custom Nav */
+        .bru-nav {
+            position: fixed; top: 0; width: 100%; padding: 1.5rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            mix-blend-mode: difference; z-index: 100;
+        }
+        .bru-nav a {
+            color: #fff; text-decoration: none; font-weight: 700; font-size: 1.1rem;
+            text-transform: uppercase; letter-spacing: 2px;
+        }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex; flex-direction: column; justify-content: center;
+            padding: 2rem 5%; position: relative;
+        }
+        .hero-glitch {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(4rem, 10vw, 12rem);
+            font-weight: 800;
+            line-height: 0.9;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-glitch span { display: block; color: transparent; -webkit-text-stroke: 2px var(--text); }
+        .hero-glitch span.filled { color: var(--accent-2); -webkit-text-stroke: 0; }
+        
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            max-width: 600px; margin-top: 2rem;
+            border-left: 4px solid var(--accent-1);
+            padding-left: 1rem;
+        }
+
+        /* Abstract shapes */
+        .shape-1 {
+            position: absolute; top: -10%; right: -10%;
+            width: 50vw; height: 50vw;
+            background: radial-gradient(circle, var(--accent-3) 0%, transparent 60%);
+            opacity: 0.3; filter: blur(60px); z-index: 1;
+        }
+        .shape-2 {
+            position: absolute; bottom: 10%; left: -10%;
+            width: 40vw; height: 40vw;
+            background: radial-gradient(circle, var(--accent-1) 0%, transparent 60%);
+            opacity: 0.2; filter: blur(60px); z-index: 1;
+        }
+
+        /* Container */
+        .container { max-width: 1400px; margin: 0 auto; padding: 5rem 5%; }
+        
+        h2.section-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(3rem, 6vw, 6rem);
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 1rem;
+        }
+
+        /* Grid Layouts */
+        .bento-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .bento-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 16px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .bento-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.06);
+            border-color: var(--accent-2);
+        }
+        .bento-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-2); }
+        .bento-card p { color: #a1a1aa; }
+
+        /* Timeline */
+        .timeline {
+            border-left: 2px solid #333;
+            padding-left: 2rem; margin-left: 1rem;
+        }
+        .timeline-item {
+            position: relative; margin-bottom: 4rem;
+        }
+        .timeline-item::before {
+            content: ''; position: absolute;
+            left: -2.45rem; top: 0;
+            width: 16px; height: 16px; border-radius: 50%;
+            background: var(--accent-1);
+            box-shadow: 0 0 20px var(--accent-1);
+        }
+        .timeline-date { color: var(--accent-1); font-weight: 700; margin-bottom: 0.5rem; }
+        .timeline-title { font-size: 2rem; font-family: 'Syne', sans-serif; margin-bottom: 1rem; }
+        
+        /* Footer */
+        .cta-section {
+            text-align: center; padding: 8rem 5%;
+            background: #000;
+        }
+        .cta-section h2 {
+            font-size: clamp(2rem, 5vw, 4rem); font-family: 'Syne', sans-serif;
+            margin-bottom: 2rem;
+        }
+        .btn-brutal {
+            display: inline-block; padding: 1.5rem 3rem;
+            background: var(--accent-2); color: #000;
+            font-size: 1.2rem; font-weight: 700; text-transform: uppercase;
+            text-decoration: none; border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-brutal:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 255, 157, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <nav class="bru-nav">
+        <a href="/">← Volver a VestraWeb</a>
+        <a href="#cv">Descargar CV</a>
+    </nav>
+
+    <header class="hero">
+        <div class="shape-1"></div>
+        <div class="shape-2"></div>
+        <h1 class="hero-glitch">
+            <span>Diseñador</span>
+            <span>Gráfico en</span>
+            <span class="filled">Barcelona.</span>
+        </h1>
+        <div class="hero-subtitle">
+            <p><strong>MARIO / LEAD FRONT-END ARCHITECT & UI/UX</strong></p>
+            <p>Con 7 años de experiencia fusionando el diseño visual de alto impacto con arquitecturas tecnológicas modernas (React, Vite, Node.js). Diagnostico problemas, diseño soluciones y escribo código.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2 class="section-title">El Perfil</h2>
+            <div style="font-size: 1.2rem; max-width: 800px; color: #a1a1aa;">
+                <p>Mi enfoque como diseñador gráfico en Barcelona y desarrollador consiste en analizar problemas operativos complejos —como procesos manuales o falta de conversión en ventas— y resolverlos mediante interfaces deslumbrantes y sistemas potentes.</p>
+                <br>
+                <p>Desde e-commerce construidos desde cero hasta automatizaciones disruptivas impulsadas por Inteligencia Artificial. Aseguro excelencia estética y técnica en entornos exigentes.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">Habilidades / Stack</h2>
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <h3>Frontend & UI/UX</h3>
+                    <p>React.js, JavaScript (ES6+), HTML5, CSS3, Next.js, Tailwind CSS. Creación de interfaces pixel-perfect, prototipado avanzado y diseño centrado en el usuario.</p>
+                </div>
+                <div class="bento-card">
+                    <h3>Backend & Architecture</h3>
+                    <p>Node.js, Python, PHP, SQL, Prisma, pnpm, Caddy. Arquitecturas monorepo y bases de datos robustas para soportar frontends inmaculados.</p>
+                </div>
+                <div class="bento-card">
+                    <h3>Automation & AI Voice</h3>
+                    <p>Vapi (Agentes de voz IA), LLMs, WhatsApp API, n8n, Python Processors, JSON Webhooks. Diseño de flujos conversacionales e interfaces invisibles.</p>
+                </div>
+                <div class="bento-card">
+                    <h3>CMS & E-Commerce</h3>
+                    <p>WordPress (Custom Plugins & Themes), WooCommerce, Shopify. Desarrollo de experiencias de compra únicas y administrables.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">Proyectos Brutales</h2>
+            <div class="timeline">
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Vestra Solutions / VestraWeb</div>
+                    <h3 class="timeline-title">Lead Front-End & Automation Architect</h3>
+                    <p style="color: #a1a1aa; max-width: 700px; margin-bottom: 1rem;">
+                        <strong>Agentes de Voz de IA (Vapi Integration):</strong> Diseñé la experiencia y la integración técnica de agentes telefónicos conversacionales utilizando LLMs. Configuré el procesamiento JSON para que agenden citas y gestionen ventas sin latencia.
+                    </p>
+                    <p style="color: #a1a1aa; max-width: 700px;">
+                        <strong>Portafolio Front-End Web:</strong> Diseñador y desarrollador de una vitrina interactiva ultraligera superando auditorías de Core Web Vitals, SEO y Accesibilidad.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Sector Financiero</div>
+                    <h3 class="timeline-title">Gelt (Dashboard de Conciliación)</h3>
+                    <p style="color: #a1a1aa; max-width: 700px;">
+                        Diseño UI/UX y desarrollo en React/Vite de un dashboard que captura información transaccional de WhatsApp y automatiza el cotejo cruzado contra entidades financieras (Addi, Brilla), eliminando el 100% de errores humanos.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Camacho Phones Corp</div>
+                    <h3 class="timeline-title">CRM, Dashboard & AI Agent</h3>
+                    <p style="color: #a1a1aa; max-width: 700px;">
+                        Diseñé la interfaz y desarrollé un CRM completo a medida con un dashboard administrativo para procesar altos volúmenes de solicitudes de ventas por WhatsApp mediante Inteligencia Artificial autónoma.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Raccoon Technologies / Deuslink</div>
+                    <h3 class="timeline-title">Front-End Developer & UI Engineer</h3>
+                    <p style="color: #a1a1aa; max-width: 700px;">
+                        Resolución de problemas críticos de UX/UI. Refactorización de código legado implementando componentes interactivos dinámicos bajo metodologías ágiles junto a equipos de diseño.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-section" id="cv">
+            <h2>¿Listo para elevar tu presencia digital?</h2>
+            <p style="color: #a1a1aa; margin-bottom: 3rem; font-size: 1.2rem;">Diseño Gráfico, UI/UX y Código avanzado en Barcelona.</p>
+            <a href="mailto:hello@vestraweb.es" class="btn-brutal">Contactar a Mario</a>
+        </section>
+    </main>
+
+    <script>
+        // Animaciones simples con Vanilla JS / GSAP si está cargado
+        document.addEventListener("DOMContentLoaded", (event) => {
+            if(typeof gsap !== 'undefined') {
+                gsap.from(".hero-glitch span", {
+                    y: 100, opacity: 0, stagger: 0.2, duration: 1, ease: "power4.out"
+                });
+                gsap.from(".bento-card", {
+                    scrollTrigger: { trigger: ".bento-grid", start: "top 80%" },
+                    y: 50, opacity: 0, stagger: 0.1, duration: 0.8
+                });
+                gsap.from(".timeline-item", {
+                    scrollTrigger: { trigger: ".timeline", start: "top 80%" },
+                    x: -50, opacity: 0, stagger: 0.2, duration: 0.8
+                });
+            }
+        });
+    </script>
+</body>
+</html>`;
+
+fs.writeFileSync('disenador-grafico-barcelona.html', brutalistHtml, 'utf8');
+console.log('Brutalist CV HTML created');
