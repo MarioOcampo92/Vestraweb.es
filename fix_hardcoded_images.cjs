@@ -31,9 +31,9 @@ for (const city of cities) {
         // Create new filename for this city
         let newName = '';
         if (oldName === 'Group-7.svg') {
-            newName = \`agencia-\${city.prefix}-\${cleanName}\`;
+            newName = `agencia-${city.prefix}-${cleanName}`;
         } else {
-            newName = \`cliente-\${city.prefix}-\${cleanName}\`;
+            newName = `cliente-${city.prefix}-${cleanName}`;
         }
         
         // Copy physical file
@@ -44,23 +44,21 @@ for (const city of cities) {
         }
         
         // Replace in HTML
-        const regex = new RegExp(\`/assets/\${oldName.replace(/[-\\/\\\\^$*+?.()|[\\]{}]/g, '\\\\$&')}\`, 'g');
-        html = html.replace(regex, \`/assets/\${newName}\`);
+        const regex = new RegExp(`/assets/${oldName.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')}`, 'g');
+        html = html.replace(regex, `/assets/${newName}`);
     }
     
     // Update ALTs dynamically in the file if they are generic
-    // (This requires a bit of parsing or manual replace since we know the HTML structure)
-    // We can replace generic alts with keyword-rich alts.
-    html = html.replace(/alt="Boletarium"/g, \`alt="Cliente de \${city.prefix.replace(/-/g, ' ')}: Boletarium"\`);
-    html = html.replace(/alt="Selva de Sabores"/g, \`alt="Proyecto de \${city.prefix.replace(/-/g, ' ')} para Selva de Sabores"\`);
-    html = html.replace(/alt="Jordina Arnau"/g, \`alt="Cliente de \${city.prefix.replace(/-/g, ' ')}: Jordina Arnau"\`);
-    html = html.replace(/alt="CRI"/g, \`alt="Desarrollo web en \${city.keyword} para CRI"\`);
-    html = html.replace(/alt="JMJ"/g, \`alt="Diseño de página web en \${city.keyword} para JMJ"\`);
-    html = html.replace(/alt="JO BRAND"/g, \`alt="Cliente de \${city.prefix.replace(/-/g, ' ')}: JO BRAND"\`);
-    html = html.replace(/alt="Siete Mandarinas"/g, \`alt="Proyecto web en \${city.keyword} para Siete Mandarinas"\`);
-    html = html.replace(/alt="La Rita"/g, \`alt="Cliente de \${city.prefix.replace(/-/g, ' ')}: La Rita"\`);
-    html = html.replace(/alt="Sobre Nosotros"/g, \`alt="Equipo de VestraWeb trabajando en \${city.prefix.replace(/-/g, ' ')}"\`);
+    html = html.replace(/alt="Boletarium"/g, `alt="Cliente de ${city.prefix.replace(/-/g, ' ')}: Boletarium"`);
+    html = html.replace(/alt="Selva de Sabores"/g, `alt="Proyecto de ${city.prefix.replace(/-/g, ' ')} para Selva de Sabores"`);
+    html = html.replace(/alt="Jordina Arnau"/g, `alt="Cliente de ${city.prefix.replace(/-/g, ' ')}: Jordina Arnau"`);
+    html = html.replace(/alt="CRI"/g, `alt="Desarrollo web en ${city.keyword} para CRI"`);
+    html = html.replace(/alt="JMJ"/g, `alt="Diseño de página web en ${city.keyword} para JMJ"`);
+    html = html.replace(/alt="JO BRAND"/g, `alt="Cliente de ${city.prefix.replace(/-/g, ' ')}: JO BRAND"`);
+    html = html.replace(/alt="Siete Mandarinas"/g, `alt="Proyecto web en ${city.keyword} para Siete Mandarinas"`);
+    html = html.replace(/alt="La Rita"/g, `alt="Cliente de ${city.prefix.replace(/-/g, ' ')}: La Rita"`);
+    html = html.replace(/alt="Sobre Nosotros"/g, `alt="Equipo de VestraWeb trabajando en ${city.prefix.replace(/-/g, ' ')}"`);
     
     fs.writeFileSync(htmlPath, html, 'utf8');
-    console.log(\`Updated images and ALTs for \${city.keyword}\`);
+    console.log(`Updated images and ALTs for ${city.keyword}`);
 }
