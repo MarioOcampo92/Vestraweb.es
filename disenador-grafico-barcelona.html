@@ -732,50 +732,35 @@
 
     
 
-    <header class="header">
-        <div class="logo">
-            <a href="/" style="display: flex; align-items: center; text-decoration: none;">
-                <img src="/assets/vestra-logo-gradient.svg" alt="VestraWeb - Agencia de Diseño Web y SEO en Tarragona" style="height: 32px;" fetchpriority="high">
-            </a>
-        </div>
-        <nav class="nav-links">
-            <a href="/">Inicio</a>
-            <a href="/portafolio">Portafolio</a>
-            <div class="nav-dropdown">
-                <a href="#" style="display:flex; align-items:center; gap: 4px; cursor: pointer; text-decoration: none;">Ubicaciones <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
-                <div class="nav-dropdown-content">
-                    <a href="/">Tarragona</a>
-                    <a href="/diseno-web-castellon">Castellón</a>
-                    <a href="/diseno-web-wordpress-barcelona">Barcelona</a>
-                    <a href="/disenador-grafico-barcelona" title="Bio Diseñador Gráfico en Barcelona">Bio: Diseñador Gráfico Barcelona</a>
-                </div>
+    
+
+    
+
+    
+        <!-- BRUTALIST CV-NAV -->
+    <nav class="cv-nav">
+        <a href="/" title="Volver a VestraWeb">[ VOLVER ]</a>
+        <a href="/contactar" title="Contactar Diseñador Gráfico Barcelona">[ SYS.CONTACT ]</a>
+    </nav>
+
+    <header class="hero" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.2) 2px, rgba(0,0,0,0.2) 4px);">
+        <div class="hero-top-data">>> SIGNAL_LOST · SYS-04 · <span id="hero-clock">14:32:08</span></div>
+        
+        <div class="hero-content" style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; width: 100%; text-align: left; padding-left: 5%;">
+            <div class="hero-title glitch-wrapper" style="margin-bottom: 2rem;">
+                <h1 class="filled" style="color: #fff; margin:0; padding:0; font-size: clamp(3rem, 7.5vw, 6rem); font-weight: 900; line-height: 0.95; letter-spacing: -2px;">DISEÑADOR<br>GRÁFICO EN<br>BARCELONA</h1>
+                <div class="glitch-layer glitch-cyan" aria-hidden="true">DISEÑADOR<br>GRÁFICO EN<br>BARCELONA</div>
+                <div class="glitch-layer glitch-magenta" aria-hidden="true">DISEÑADOR<br>GRÁFICO EN<br>BARCELONA</div>
             </div>
-            <a href="/contactar">Contactar</a>
-        </nav>
-        <div class="header-actions">
-            <button class="search-icon-btn" aria-label="Search">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            </button>
-            <button class="hamburger-icon-btn" aria-label="Menu" style="display: none; background: none; border: none; color: inherit; cursor: pointer;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="burger-icon"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-            </button>
+            <div class="hero-subtitle">
+                <div style="font-family: monospace; font-size: 0.85rem; color: var(--color-primary); letter-spacing: 2px; margin-bottom: 0.5rem;">[ ▓▓ IDENTIDAD VERIFICADA ]</div>
+                <p style="font-family: monospace; font-size: 1rem;">Especialista en <strong>Diseñador Gráfico en Barcelona</strong>. Arquitectura Front-End y Diseñador Gráfico enfocado en rendimiento extremo (Core Web Vitals).</p>
+            </div>
         </div>
-    </header>
 
-    
-
-    
-        <header class="hero" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.2) 2px, rgba(0,0,0,0.2) 4px);">
-        <h1 class="hero-title glitch-wrapper">
-            <span class="filled" style="color: #fff;">DISEÑADOR</span><br>
-            <span class="filled" style="color: #fff;">GRÁFICO EN</span><br>
-            <span class="filled" style="color: #fff;">BARCELONA</span>
-            <div class="glitch-layer glitch-cyan" aria-hidden="true">DISEÑADOR<br>GRÁFICO EN<br>BARCELONA</div>
-            <div class="glitch-layer glitch-magenta" aria-hidden="true">DISEÑADOR<br>GRÁFICO EN<br>BARCELONA</div>
-        </h1>
-        <div class="hero-subtitle">
-            <p style="font-family: monospace; font-size: 1rem;">Especialista en <strong>Diseñador Gráfico en Barcelona</strong>. Arquitectura Front-End y Diseñador Gráfico enfocado en rendimiento extremo (Core Web Vitals).</p>
-        </div>
+        <!-- Scattered red ASCII noise markers -->
+        <div class="ascii-noise" style="top: 15%; right: 5%; font-size: 12px;">SYS_ERR</div>
+        <div class="ascii-noise" style="bottom: 20%; right: 8%;">01_04</div>
     </header>
 
 
@@ -2980,5 +2965,17 @@
             initTimelineThreeJS();
         });
 </script>
+    <script>
+        // Live clock for hero telemetry
+        function updateHeroClock() {
+            const el = document.getElementById('hero-clock');
+            if (el) {
+                const now = new Date();
+                el.textContent = now.toTimeString().split(' ')[0];
+            }
+        }
+        setInterval(updateHeroClock, 1000);
+        updateHeroClock();
+    </script>
 </body>
 </html>
