@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+const fs = require('fs');
+
+const htmlContent = `<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -548,4 +550,7 @@
         }
     </script>
 </body>
-</html>
+</html>`;
+
+fs.writeFileSync('disenador-grafico-barcelona.html', htmlContent, 'utf8');
+console.log('V3 Cyberpunk CV: Restored missing Bio sections, added Marquee section, kept H1 keyword');
