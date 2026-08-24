@@ -303,7 +303,7 @@
         .edu-col { flex: 1; min-width: 300px; background: #111; padding: 2.5rem; border-left: 3px solid var(--color-primary); }
         .edu-col h3 { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; color: #fff; }
         .edu-list { list-style: none; }
-        .edu-list li { margin-bottom: 1rem; color: #a1a1aa; display: flex; align-items: flex-start; }
+        .edu-list li { margin-bottom: 1rem; color: #f8fafc; display: flex; align-items: flex-start; }
         .edu-list li::before { content: '▹'; color: var(--color-primary); margin-right: 0.5rem; font-size: 1.2rem; }
         .edu-list strong { color: #fff; display: block; }
 
@@ -487,7 +487,7 @@
             font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase;
         }
         .t3d-glass-card h4 {
-            font-family: var(--font-body); color: #a1a1aa; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;
+            font-family: var(--font-body); color: #f8fafc; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;
         }
         .t3d-glass-card p {
             color: #888; font-size: 1rem; line-height: 1.7;
@@ -524,7 +524,7 @@
         @media (min-width: 768px) { .swiper-slide { width: 400px; padding: 3rem; } }
         .swiper-slide-active { border-color: var(--color-primary); }
         .swiper-slide h3 { color: #fff; font-size: 1.5rem; margin-bottom: 1rem; font-family: var(--font-heading); text-transform: uppercase; }
-        .swiper-slide p { color: #a1a1aa; font-size: 0.95rem; line-height: 1.6; }
+        .swiper-slide p { color: #f8fafc; font-size: 0.95rem; line-height: 1.6; }
         .swiper-icon { font-size: 2.5rem; color: var(--color-primary); margin-bottom: 1rem; font-family: monospace; font-weight: bold; }
         .swiper-pagination-bullet { background: #555; }
         .swiper-pagination-bullet-active { background: var(--color-primary); }
@@ -584,13 +584,16 @@
         
         
         
-        <div class="hero-title glitch-wrapper">
-            <h1 class="filled" style="color: #fff; margin:0; padding:0; font-size: inherit; font-weight: inherit; line-height: inherit;">DISEÑADOR<br>GRÁFICO EN<br>BARCELONA</h1>
-            <div class="glitch-layer glitch-cyan" aria-hidden="true">DISEÑADOR<br>GRÁFICO EN<br>BARCELONA</div>
-            <div class="glitch-layer glitch-magenta" aria-hidden="true">DISEÑADOR<br>GRÁFICO EN<br>BARCELONA</div>
-        </div>
-        <div class="hero-subtitle">
-            <p style="font-family: monospace; font-size: 1rem;">Especialista en <strong>Diseñador Gráfico en Barcelona</strong>. Arquitectura Front-End y Diseñador Gráfico enfocado en rendimiento extremo (Core Web Vitals).</p>
+        <div id="webgl-container" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events: none;"></div>
+        <div class="hero-content" style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center;">
+            <div class="hero-title glitch-wrapper" style="margin-bottom: 2rem;">
+                <h1 class="filled" style="color: #fff; margin:0; padding:0; font-size: inherit; font-weight: inherit; line-height: inherit;">DISEÑADOR<br>GRÁFICO EN<br>BARCELONA</h1>
+                <div class="glitch-layer glitch-cyan" aria-hidden="true">DISEÑADOR<br>GRÁFICO EN<br>BARCELONA</div>
+                <div class="glitch-layer glitch-magenta" aria-hidden="true">DISEÑADOR<br>GRÁFICO EN<br>BARCELONA</div>
+            </div>
+            <div class="hero-subtitle">
+                <p style="font-family: monospace; font-size: 1rem;">Especialista en <strong>Diseñador Gráfico en Barcelona</strong>. Arquitectura Front-End y Diseñador Gráfico enfocado en rendimiento extremo (Core Web Vitals).</p>
+            </div>
         </div>
     </header>
 
@@ -635,6 +638,8 @@
         
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-icon">UI/UX
                 <div class="swiper-slide">
                     <div class="swiper-icon">UI/UX</div>
                     <div style="color: #fff; font-size: 1.5rem; margin-bottom: 1rem; font-family: var(--font-heading); text-transform: uppercase; font-weight:bold;">Frontend & UI/UX Design</div>
@@ -720,7 +725,7 @@
                         <div class="t3d-glow"></div>
                         <div class="t3d-date">2023 - PRESENT</div>
                         <div style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">Lead Front-End & Automation Architect</div>
-                        <div style="font-family: var(--font-body); color: #a1a1aa; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Vestra Solutions / VestraWeb</div>
+                        <div style="font-family: var(--font-body); color: #f8fafc; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Vestra Solutions / VestraWeb</div>
                         <p>Dirección técnica de plataformas de alto rendimiento. Desarrollo de arquitecturas headless, integraciones B2B complejas (APIs, Webhooks, CRMs) y sistemas de automatización con IA. Optimización milimétrica de LCP/CLS y escalabilidad de servidores.</p>
                     </div>
                 </div>
@@ -730,7 +735,7 @@
                         <div class="t3d-glow"></div>
                         <div class="t3d-date">SISTEMAS B2B CORE</div>
                         <div style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">Multi-Tenant Email Processor</div>
-                        <div style="font-family: var(--font-body); color: #a1a1aa; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Desarrollo Interno Corporativo</div>
+                        <div style="font-family: var(--font-body); color: #f8fafc; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Desarrollo Interno Corporativo</div>
                         <p>Diseño y despliegue de un procesador de emails en Python con webhooks para analizar flujos masivos de correos B2B (proveedores de vehículos). Extracción de datos en tiempo real mediante LLMs y sincronización directa con bases de datos MySQL, ahorrando cientos de horas mensuales.</p>
                     </div>
                 </div>
@@ -740,7 +745,7 @@
                         <div class="t3d-glow"></div>
                         <div class="t3d-date">FINTECH SECTOR</div>
                         <div style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">Ingeniero UI/UX - Gelt Dashboard</div>
-                        <div style="font-family: var(--font-body); color: #a1a1aa; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Dashboard de Conciliación Financiera</div>
+                        <div style="font-family: var(--font-body); color: #f8fafc; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Dashboard de Conciliación Financiera</div>
                         <p>Diseñé y desarrollé un Dashboard robusto (React/Vite) que captura la información transaccional y automatiza el cotejo cruzado contra entidades (Addi, Brilla, Superintendencia). Conciliación inmediata y 100% libre de errores humanos.</p>
                     </div>
                 </div>
@@ -750,7 +755,7 @@
                         <div class="t3d-glow"></div>
                         <div class="t3d-date">SECTOR COMERCIAL VENTA</div>
                         <div style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">CRM & AI Autonomous Agent</div>
-                        <div style="font-family: var(--font-body); color: #a1a1aa; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Camacho Phones Corp</div>
+                        <div style="font-family: var(--font-body); color: #f8fafc; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Camacho Phones Corp</div>
                         <p>Desarrollé un CRM a medida con Dashboard administrativo e integré un agente de Inteligencia Artificial (LLM) que atiende WhatsApp de forma totalmente autónoma. Perfila clientes, responde consultas y cierra ventas reales.</p>
                     </div>
                 </div>
@@ -944,127 +949,7 @@
                 camera.position.y += (-mouseY * 3 - (camera.position.y - 2)) * 0.05;
                 camera.lookAt(0, -2, -10);
 
-                    <div style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">Ingeniero UI/UX - Gelt Dashboard</div>
-                    <div style="font-family: var(--font-body); color: #a1a1aa; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Dashboard de Conciliación Financiera</div>
-                    <p>Las transacciones reportadas caóticamente vía grupos de WhatsApp exigían validación manual, siendo susceptibles a errores graves. Diseñé y desarrollé un Dashboard robusto (React/Vite) que captura la información transaccional y automatiza el cotejo cruzado contra entidades (Addi, Brilla, Superintendencia Financiera). Conciliación inmediata y 100% libre de errores humanos.</p>
-                </div>
-            </div>
-            
-            <div class="timeline-node">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">SECTOR COMERCIAL VENTA</div>
-                    <div style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">CRM & AI Autonomous Agent</div>
-                    <div style="font-family: var(--font-body); color: #a1a1aa; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Camacho Phones Corp</div>
-                    <p>El equipo de soporte sufría cuellos de botella severos. Desarrollé un CRM a medida con Dashboard administrativo e integré un agente de Inteligencia Artificial (LLM) que atiende WhatsApp de forma totalmente autónoma. Perfila clientes, responde consultas, cierra ventas reales y sincroniza los datos directamente en el CRM operativo.</p>
-                </div>
-            </div>
-
-            <div class="timeline-node">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">E-COMMERCE INTERNACIONAL USA</div>
-                    <div style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">Arquitectura Front-End E-commerce</div>
-                    <div style="font-family: var(--font-body); color: #a1a1aa; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Nonesuch Precision (Website de Armas)</div>
-                    <p>Fabricante y distribuidor norteamericano requería una plataforma altamente segura. Construí su e-commerce desde cero mediante un tema de WordPress 100% personalizado. Implementé robustas automatizaciones nativas para publicar e integrar dinámicamente un catálogo de armamento muy complejo con redes sociales, sin desajustes.</p>
-                </div>
-            </div>
-
-            <div class="timeline-node">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">2020 - 2022</div>
-                    <div style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">Front-End Developer & UI Engineer</div>
-                    <div style="font-family: var(--font-body); color: #a1a1aa; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Raccoon Technologies / Deuslink</div>
-                    <p>Resolución de problemas críticos de rendimiento web y experiencia de usuario (UX) en aplicaciones de altísima demanda. Lideré la refactorización de código legado implementando componentes interactivos dinámicos y ejecuté una optimización estricta de métricas SEO y Core Web Vitals, reduciendo los tiempos de carga inicial (LCP) en más de un 40%.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Scripts at the end for performance -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-
-    <script>
-        window.addEventListener('load', () => {
-            initThreeJS();
-            initGSAP();
-        });
-
-        function initThreeJS() {
-            if (typeof THREE === 'undefined') return;
-            const container = document.getElementById('webgl-container');
-            const scene = new THREE.Scene();
-            scene.fog = new THREE.FogExp2(0x050505, 0.002);
-
-            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
-            
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-            container.appendChild(renderer.domElement);
-
-            const geometry = new THREE.BufferGeometry();
-            const count = 3000;
-            const positions = new Float32Array(count * 3);
-            const colors = new Float32Array(count * 3);
-            const color = new THREE.Color(0xf7484b);
-
-            for(let i = 0; i < count; i++) {
-                positions[i*3] = (Math.random() - 0.5) * 100;
-                positions[i*3+1] = 0; 
-                positions[i*3+2] = (Math.random() - 0.5) * 100;
-
-                colors[i*3] = color.r;
-                colors[i*3+1] = color.g;
-                colors[i*3+2] = color.b;
-            }
-
-            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-            geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-
-            const material = new THREE.PointsMaterial({
-                size: 0.15,
-                vertexColors: true,
-                transparent: true,
-                opacity: 0.8,
-                blending: THREE.AdditiveBlending
-            });
-
-            const particles = new THREE.Points(geometry, material);
-            particles.position.y = -5;
-            scene.add(particles);
-
-            camera.position.z = 10;
-            camera.position.y = 2;
-            camera.rotation.x = -0.2;
-
-            let mouseX = 0; let mouseY = 0;
-            document.addEventListener('mousemove', (e) => {
-                mouseX = (e.clientX / window.innerWidth) - 0.5;
-                mouseY = (e.clientY / window.innerHeight) - 0.5;
-            });
-
-            let time = 0;
-            function animate() {
-                requestAnimationFrame(animate);
-                time += 0.01;
-
-                const positions = particles.geometry.attributes.position.array;
-                for(let i = 0; i < count; i++) {
-                    const x = positions[i*3];
-                    const z = positions[i*3+2];
-                    positions[i*3+1] = Math.sin(x * 0.1 + time) * 2 + Math.cos(z * 0.1 + time) * 2;
-                }
-                particles.geometry.attributes.position.needsUpdate = true;
-                
-                camera.position.x += (mouseX * 5 - camera.position.x) * 0.05;
-                camera.position.y += (-mouseY * 3 - (camera.position.y - 2)) * 0.05;
-                camera.lookAt(0, -2, -10);
-
-                renderer.render(scene, camera);
+                    renderer.render(scene, camera);
             }
             animate();
 
