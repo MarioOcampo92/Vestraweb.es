@@ -1156,7 +1156,7 @@
             if (typeof gsap === 'undefined') return;
             gsap.registerPlugin(ScrollTrigger);
             
-            gsap.from(".hero-title span", { y: 100, opacity: 0, duration: 1.2, stagger: 0.15, ease: "power4.out" });
+            gsap.from(".hero-title", { y: 100, opacity: 0, duration: 1.2, ease: "power4.out" });
             gsap.from(".hero-subtitle", { x: -50, opacity: 0, duration: 1, delay: 0.8, ease: "power3.out" });
 
             const sections = document.querySelectorAll('.section-title');
