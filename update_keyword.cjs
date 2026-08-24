@@ -1,5 +1,4 @@
 const fs = require('fs');
-const glob = require('glob'); // Not using glob, will use fs.readdirSync
 const path = require('path');
 
 console.log("Starting Keyword Pivot and Link Injection...");
