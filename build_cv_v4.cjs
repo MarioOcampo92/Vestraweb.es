@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+const fs = require('fs');
+
+const htmlContent = `<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -647,4 +649,7 @@
         }
     </script>
 </body>
-</html>
+</html>`;
+
+fs.writeFileSync('disenador-grafico-barcelona.html', htmlContent, 'utf8');
+console.log('V4 CV: 800+ words, Schema.org geo-localizado, title tags in assets, complete CV dump');
