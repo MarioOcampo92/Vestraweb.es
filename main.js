@@ -427,7 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ===== CONTACT FORM AJAX HANDLER =====
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.contact-form').forEach(form => {
+    document.querySelectorAll('.contact-form, .contact-page-form').forEach(form => {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = form.querySelector('button[type="submit"]');
