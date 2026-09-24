@@ -8,9 +8,9 @@
 @media (min-width: 768px) { .about-grid { grid-template-columns: 1fr 1fr; } }
 .about-content { }
 .about-label {
-  font-size: 0.9rem; font-weight: 600;
+  font-size: 0.9rem; font-weight: 700;
   letter-spacing: 2px; text-transform: uppercase;
-  color: var(--color-primary); margin-bottom: 1rem;
+  color: #c92a2d; margin-bottom: 1rem;
   display: block;
 }
 h2, .h2 {

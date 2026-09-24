@@ -2,14 +2,13 @@
 .empresas {
   padding: 7rem 2.5rem;
   background: linear-gradient(135deg, #f7484b, #f7484a99, #b29dff);
-  background-size: 200% 200%;
-  animation: gradientHue 6s ease infinite;
+  animation: gradientHue 8s ease-in-out infinite;
+  will-change: filter;
   color: #fff;
 }
 @keyframes gradientHue {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0%, 100% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(30deg); }
 }
 h3, .h3 {
   font-size: 1.2rem; font-weight: 600;
@@ -24,6 +23,7 @@ h3, .h3 {
 }
 .empresas-logos img {
   max-height: 45px; max-width: 160px;
+  height: auto; width: auto;
   object-fit: contain; filter: brightness(0) invert(1);
   opacity: 0.9; transition: opacity .3s;
 }

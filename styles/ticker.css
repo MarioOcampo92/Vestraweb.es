@@ -15,8 +15,7 @@
   font-weight: 900;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 2px #d1d5db;
-  transition: color .3s, -webkit-text-stroke .3s;
+  -webkit-text-stroke: 2px #4b5563;
 }
 .ticker-track span.filled {
   color: var(--color-text);

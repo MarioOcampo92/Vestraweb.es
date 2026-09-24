@@ -18,7 +18,15 @@ img { max-width: 100%; height: auto; display: block; }
 button { font-family: inherit; cursor: pointer; }
 
 /* ====== GSAP animation states ====== */
-.gs-reveal { opacity: 0; transform: translateY(50px); }
-.gs-reveal-left { opacity: 0; transform: translateX(-60px); }
-.gs-reveal-right { opacity: 0; transform: translateX(60px); }
-.gs-reveal-scale { opacity: 0; transform: scale(0.9); }
+.gs-reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
+.gs-reveal-left { opacity: 0; transform: translateX(-50px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
+.gs-reveal-right { opacity: 0; transform: translateX(50px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
+.gs-reveal-scale { opacity: 0; transform: scale(0.92); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
+
+.gs-reveal.is-revealed,
+.gs-reveal-left.is-revealed,
+.gs-reveal-right.is-revealed,
+.gs-reveal-scale.is-revealed {
+  opacity: 1;
+  transform: none;
+}
