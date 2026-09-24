@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="preload" as="image" href="/assets/vestra-logo-gradient.svg" type="image/svg+xml">
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,6 +41,70 @@
     <!-- Base Styles -->
     <link rel="stylesheet" href="/style.css">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "VestraWeb",
+      "image": "/assets/vestra-logo-gradient.svg",
+      "@id": "https://vestraweb.es",
+      "url": "https://vestraweb.es/diseno-web-wordpress-barcelona",
+      "telephone": "+34687180231",
+      "priceRange": "400€ - 2500€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Barcelona",
+        "addressRegion": "Barcelona",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.3851,
+        "longitude": 2.1734
+      },
+      "description": "Agencia de diseño web WordPress y posicionamiento SEO en Barcelona. Creamos páginas web a medida, rápidas y optimizadas para captar clientes."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta el diseño de una página web en Barcelona?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El precio de un diseño web a medida en Barcelona oscila generalmente entre 400€ para proyectos básicos y 2500€ para tiendas online o plataformas corporativas más complejas. Cada desarrollo web es único, por lo que adaptamos nuestra estrategia y presupuesto para maximizar el retorno de tu inversión."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo tarda el desarrollo web y posicionamiento SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para crear una web profesional y optimizada desde cero, los plazos habituales son de 2 a 7 semanas. Garantizamos un flujo de trabajo ágil y reportes constantes de progreso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo mejora mi posicionamiento SEO en Barcelona y Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aplicamos técnicas avanzadas de SEO local y auditorías de posicionamiento web en Barcelona para que tu negocio domine los primeros resultados de Google. Optimizamos la velocidad de carga, la estructura de etiquetas, el contenido y el rendimiento en dispositivos móviles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Podré gestionar mi página web yo mismo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "¡Por supuesto! Integramos gestores de contenido (CMS) como WordPress muy intuitivos. Una vez finalizado el diseño, recibirás una capacitación para que puedas modificar textos o subir nuevos servicios de forma autónoma."
+          }
+        }
+      ]
+    }
+    </script>
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://vestraweb.es/diseno-web-wordpress-barcelona">
     <meta name="author" content="VestraWeb">
@@ -50,7 +115,7 @@
     <header class="header">
         <div class="logo">
             <a href="/" style="display: flex; align-items: center; text-decoration: none;">
-                <img src="/assets/vestra-logo-gradient.svg" alt="VestraWeb - Agencia de Diseño Web y SEO en Barcelona" style="height: 32px;" fetchpriority="high">
+                <img src="/assets/vestra-logo-gradient.svg" alt="Agencia de Diseño Web y SEO en Barcelona" style="height: 32px;" fetchpriority="high">
             </a>
         </div>
         <nav class="nav-links">
@@ -59,8 +124,10 @@
             <div class="nav-dropdown">
                 <a href="#" style="display:flex; align-items:center; gap: 4px; cursor: pointer; text-decoration: none;">Ubicaciones <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
                 <div class="nav-dropdown-content">
-                    <a href="/">Barcelona</a>
+                    <a href="/">Tarragona</a>
                     <a href="/diseno-web-castellon">Castellón</a>
+                    <a href="/diseno-web-wordpress-barcelona">Barcelona</a>
+                    <a href="/disenador-grafico-barcelona" title="Bio Diseñador Gráfico en Barcelona">Bio: Diseñador Gráfico Barcelona</a>
                 </div>
             </div>
             <a href="/contactar">Contactar</a>
@@ -118,7 +185,7 @@
                 <p>Con más de 7 años de experiencia desarrollando proyectos web para empresas en Barcelona y provincia, estamos especializados en desarrollar webs en WordPress totalmente administrables que atraen clientes, sino que generan resultados y atraen clientes.</p>
             </div>
             <div class="about-image">
-                <img src="/assets/agencia-diseno-web-wordpress-barcelona-equipo.svg" alt="Equipo de VestraWeb trabajando en diseno web wordpress barcelona" loading="lazy">
+                <img src="/assets/agencia-diseno-web-wordpress-barcelona-equipo.svg" alt="Equipo de trabajando en diseno web wordpress barcelona" loading="lazy">
             </div>
         </div>
     </section>
@@ -162,7 +229,7 @@
                 
                 <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
                     <input type="checkbox" name="legal_accept" required style="margin-top: 0.25rem;">
-                    <span>He leído y acepto la Política de Privacidad.</span>
+                    <span>He leído y acepto la <a href="/privacidad" target="_blank" style="text-decoration: underline; color: inherit;">Política de Privacidad</a>.</span>
                 </label>
             </div>
             <button type="submit" class="btn-submit">Enviar Mensaje</button>
@@ -196,7 +263,7 @@
     </section>
 
     <!-- 14. Parallax Banner -->
-    <section class="parallax-banner" style="background-image: url('/assets/mokko_parallax-scaled.jpg'); background-attachment: fixed; background-position: center; background-size: cover;">
+    <section class="parallax-banner" style="background-image: url('/assets/mokko_parallax-scaled.jpg'); background-position: center; background-size: cover;">
         <div class="h2">Más de 7 Años en la Industria</div>
     </section>
 

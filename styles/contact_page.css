@@ -60,7 +60,7 @@
     display: flex;
     gap: 1.5rem;
 }
-.contact-page-form input, .contact-page-form textarea {
+.contact-page-form input:not([type="checkbox"]), .contact-page-form textarea {
     width: 100%;
     padding: 1.2rem;
     border: 1px solid #ddd;

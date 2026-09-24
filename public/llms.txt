@@ -1,0 +1,27 @@
+﻿# VestraWeb
+
+> Agencia especializada en desarrollo y diseño web a medida, posicionamiento SEO local y diseño gráfico en Tarragona, Barcelona y Castellón. Creamos sitios web ultra rápidos y optimizados para conversión.
+
+## Ubicaciones y Servicios
+
+- [Diseño Web en Tarragona](https://vestraweb.es/): Servicios de desarrollo web y posicionamiento SEO local en Tarragona y Reus.
+- [Diseño Web en Castellón](https://vestraweb.es/diseno-web-castellon): Creación de páginas web corporativas y tiendas online para empresas en Castellón.
+- [Diseño Web WordPress en Barcelona](https://vestraweb.es/diseno-web-wordpress-barcelona): Desarrollo profesional en WordPress y WooCommerce en Barcelona.
+- [Diseñador Gráfico en Barcelona](https://vestraweb.es/disenador-grafico-barcelona): Servicios de diseño gráfico, branding, identidad corporativa y arquitectura Front-End por Mario Ocampo.
+
+## Portafolio de Proyectos
+
+- [Jordina Arnau](https://vestraweb.es/jordina-arnau): Desarrollo web de portfolio y marca personal.
+- [Mellows](https://vestraweb.es/mellows): Tienda online, experiencia de compra optimizada e identidad visual de marca.
+- [Selva de Sabores](https://vestraweb.es/selva-de-sabores): Diseño web gastronómico y catálogo digital de productos.
+- [AU Arquitectos](https://vestraweb.es/auarquitectos): Sitio web corporativo para estudio de arquitectura y portfolio de proyectos.
+- [Ball de Lletres](https://vestraweb.es/ball-de-lletres): Proyecto cultural, diseño editorial interactivo y experiencia digital.
+- [Compassionate Christmas](https://vestraweb.es/compassionate-christmas): Plataforma personalizada de donaciones y captación de fondos.
+
+## Contacto y Legal
+
+- [Contacto](https://vestraweb.es/contactar): Formulario de contacto directo, teléfono de atención (+34 687 18 02 31) y solicitud de presupuesto.
+- [Accesibilidad](https://vestraweb.es/accesibilidad): Declaración de accesibilidad web (WCAG 2.1).
+- [Aviso Legal](https://vestraweb.es/aviso-legal): Datos identificativos y condiciones generales de uso.
+- [Privacidad](https://vestraweb.es/privacidad): Política de privacidad (RGPD).
+- [Cookies](https://vestraweb.es/cookies): Configuración de cookies técnicas y analíticas.

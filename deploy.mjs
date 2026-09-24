@@ -7,7 +7,7 @@ const config = {
   host: '147.93.54.119',
   port: 65002,
   username: 'u675599434',
-  password: 'Eficiencia--28'
+  password: 'BEwdlaodisdffdf55--'
 };
 
 async function deploy() {

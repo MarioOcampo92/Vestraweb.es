@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="preload" as="image" href="/assets/vestra-logo-gradient.svg" type="image/svg+xml">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseñador Gráfico en Barcelona</title>
@@ -114,7 +115,7 @@
         ::-webkit-scrollbar-thumb { background: var(--color-primary); }
 
         .cv-nav {
-            position: fixed; top: 0; left: 0; width: 100%;
+            position: absolute; top: 110px; left: 0; width: 100%;
             padding: 1.5rem 3rem; display: flex; justify-content: space-between;
             z-index: 1000; mix-blend-mode: difference;
             font-family: var(--font-heading);
@@ -124,13 +125,13 @@
         .cv-nav a:hover { color: var(--color-primary); }
 
         #webgl-container {
-            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1; pointer-events: none;
         }
         
         .hero {
-            height: 100vh; display: flex; flex-direction: column;
-            justify-content: center; padding: 0 10%; position: relative;
+            min-height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; padding: 150px 10% 0 10%; position: relative;
         }
         
         .hero h1 {
@@ -725,7 +726,7 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body class="dark-mode">
-    <div id="webgl-container" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></div>
+    <div id="webgl-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></div>
 
     
 
@@ -741,7 +742,7 @@
     <header class="header">
         <div class="logo">
             <a href="/" style="display: flex; align-items: center; text-decoration: none;">
-                <img src="/assets/vestra-logo-gradient.svg" alt="VestraWeb - Agencia de Diseño Web y SEO en Tarragona" style="height: 32px;" fetchpriority="high">
+                <img src="/assets/vestra-logo-gradient.svg" alt="Agencia de Diseño Web y SEO en Tarragona" style="height: 32px;" fetchpriority="high">
             </a>
         </div>
         <nav class="nav-links">
@@ -787,238 +788,17 @@
         </header>
 
 
-    <section class="section section-darker">
-        <h2 class="section-title">Manifiesto y Filosofía del Diseñador Gráfico en Barcelona</h2>
-        <div class="manifesto-grid">
-            <div class="manifesto-text">
-                <p>El diseño gráfico moderno no vive en un lienzo estático. Vive en el DOM, en el servidor y en la interacción del usuario final. Con 7 años de trayectoria en el mundo tecnológico, comprendí que una web bonita es inútil si no tiene tráfico, y un sistema potente es invisible si no resulta atractivo.</p>
-                <p>Como arquitecto experto en <strong>Diseñador Gráfico en en Barcelona</strong>, fusiono lo mejor de dos mundos: la arquitectura técnica pura (React, Vite, Node.js, y desarrollo de Custom Themes en PHP) con una estética implacable basada en los principios del diseño gráfico avanzado, la tipografía y el branding estratégico.</p>
-                <p>Mi enfoque integral va mucho más allá de las plantillas prefabricadas. Desarrollo sistemas de e-commerce robustos desde cero, arquitecturas monorepo para gestión de leads masivos y las integraciones más disruptivas del momento: Inteligencia Artificial. Desde <strong>Agentes de Voz telefónicos</strong> capaces de interactuar en tiempo real hasta dashboards de conciliación financiera automatizados.</p>
-                <p>No se trata solo de escribir código o dibujar interfaces. Se trata de analizar problemas operativos complejos (como procesos manuales, integraciones fragmentadas o falta de escalabilidad en ventas) y resolverlos de forma definitiva. <strong>El píxel perfecto es la entrada; el código limpio y veloz es la verdadera máquina de conversión.</strong></p>
-                <p>Elegir un experto en <strong>Diseñador Gráfico en Barcelona</strong> significa apostar por un ecosistema digital que no solo representa fielmente la identidad de tu negocio en Cataluña y España, sino que está preparado para dominar los motores de búsqueda mediante auditorías técnicas exigentes y un SEO Local de impacto innegable.</p>
-            </div>
-            <div style="text-align: right; display: flex; flex-direction: column; gap: 2rem;">
-                <img src="/assets/agencia-diseno-web-wordpress-barcelona-equipo.svg" alt="Equipo de Diseñador Gráfico en en Barcelona" title="Expertos en Diseñador Gráfico en Barcelona - VestraWeb Team" style="width: 100%; max-width: 400px; filter: drop-shadow(0 0 20px rgba(247,72,75,0.2)); align-self: flex-end;" loading="lazy">
-                
-                <div class="edu-flex">
-                    <div class="edu-col" style="text-align: left;">
-                        <div style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; color: #fff; font-weight:bold;">Formación Tecnológica</div>
-                        <ul class="edu-list">
-                            <li><div><strong>Universidad del Valle</strong><br>Educación Superior</div></li>
-                            <li><div><strong>SENA</strong><br>Formación Tecnológica Especializada</div></li>
-                            <li><div><strong>Platzi</strong><br>Ingeniería de Software y Desarrollo Web</div></li>
-                        </ul>
-                    </div>
-                    <div class="edu-col" style="text-align: left;">
-                        <div style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; color: #fff; font-weight:bold;">Idiomas & Comunicación</div>
-                        <ul class="edu-list">
-                            <li><div><strong>Español</strong><br>Nativo - Fluidez absoluta B2B</div></li>
-                            <li><div><strong>Inglés (C1)</strong><br>Avanzado Profesional (Lectura, Escritura y Habla Técnica)</div></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <include src="components/disenador-grafico-barcelona-manifesto.html"></include>
 
 
 
-    <!-- ARSENAL TÉCNICO -->
-    <section class="section">
-        <div style="font-family: monospace; color: var(--color-primary); letter-spacing: 4px; margin-bottom: 1rem;">[ SYS.MODULE.02 ]</div>
-        <h2 class="section-title" style="margin-bottom: 4rem; text-align: left; font-size: clamp(2rem, 4vw, 4rem); max-width: 800px;">ARSENAL TÉCNICO: HERRAMIENTAS DE UN DISEÑADOR GRÁFICO EN BARCELONA</h2>
-        
-        <div class="brutalist-arsenal">
-            <!-- CARD 1 -->
-            <div class="b-card t3d-node">
-                <div class="b-cross tl"></div><div class="b-cross tr"></div><div class="b-cross bl"></div><div class="b-cross br"></div>
-                <div class="b-card-header">
-                    <div class="b-card-id">SEC.01 // UI_UX</div>
-                    <div class="b-card-icon">01</div>
-                </div>
-                <h3>Frontend & Diseño Gráfico UI/UX</h3>
-                <p>Diseño de interfaces deslumbrantes y escalables. Dominio absoluto de React.js, Next.js, HTML5, CSS3, Tailwind CSS y animaciones fluidas. Prototipado en alta fidelidad y UX centrada en la máxima conversión.</p>
-            </div>
-            
-            <!-- CARD 2 -->
-            <div class="b-card t3d-node">
-                <div class="b-cross tl"></div><div class="b-cross tr"></div><div class="b-cross bl"></div><div class="b-cross br"></div>
-                <div class="b-card-header">
-                    <div class="b-card-id">SEC.02 // BACKEND</div>
-                    <div class="b-card-icon">02</div>
-                </div>
-                <h3>Arquitectura Web y Diseño SEO</h3>
-                <p>Infraestructuras sólidas como roca. Node.js, Python, PHP, SQL, Prisma. Despliegue seguro y ultrarrápido con Docker, Git y Caddy para asegurar tiempos de respuesta en milisegundos en cada interacción.</p>
-            </div>
-            
-            <!-- CARD 3 -->
-            <div class="b-card t3d-node">
-                <div class="b-cross tl"></div><div class="b-cross tr"></div><div class="b-cross bl"></div><div class="b-cross br"></div>
-                <div class="b-card-header">
-                    <div class="b-card-id">SEC.03 // AI_ML</div>
-                    <div class="b-card-icon">03</div>
-                </div>
-                <h3>IA y Diseño Web Barcelona</h3>
-                <p>Automatizaciones que rompen el mercado: Agentes de voz telefónicos mediante IA (Vapi), LLMs conversacionales, WhatsApp API, n8n, y procesadores en Python mediante JSON Webhooks para procesos B2B.</p>
-            </div>
-            
-            <!-- CARD 4 -->
-            <div class="b-card t3d-node">
-                <div class="b-cross tl"></div><div class="b-cross tr"></div><div class="b-cross bl"></div><div class="b-cross br"></div>
-                <div class="b-card-header">
-                    <div class="b-card-id">SEC.04 // E-COM</div>
-                    <div class="b-card-icon">04</div>
-                </div>
-                <h3>Diseño para Tiendas Online</h3>
-                <p>El núcleo de mi trabajo: Shopify Plus, WooCommerce Headless, VestraWeb Custom CMS. Arquitectura de servidores de alto tráfico y bases de datos NoSQL optimizadas para escalabilidad masiva.</p>
-            </div>
-        </div>
-    </section>
+    <include src="components/disenador-grafico-barcelona-arsenal.html"></include>
 
-    <div class="marquee-container">
-        <div class="marquee-content">
-            <!-- Repeated twice for seamless loop -->
-            <span>UI/UX DESIGN</span> <span>ÔÇó</span> <span>WORDPRESS DEVELOPMENT</span> <span>ÔÇó</span> <span>REACT.JS B2B APPS</span> <span>ÔÇó</span> <span>3D DATA ANIMATION</span> <span>ÔÇó</span> <span>SEO LOCAL CORE WEB VITALS</span> <span>ÔÇó</span> <span>AI VOICE TELEPHONE AGENTS</span> <span>ÔÇó</span>
-            <span>UI/UX DESIGN</span> <span>ÔÇó</span> <span>WORDPRESS DEVELOPMENT</span> <span>ÔÇó</span> <span>REACT.JS B2B APPS</span> <span>ÔÇó</span> <span>3D DATA ANIMATION</span> <span>ÔÇó</span> <span>SEO LOCAL CORE WEB VITALS</span> <span>ÔÇó</span> <span>AI VOICE TELEPHONE AGENTS</span> <span>ÔÇó</span>
-        </div>
-    </div>
+    <include src="components/disenador-grafico-barcelona-timeline.html"></include>
 
-    <!-- EL CAMINO (TIMELINE) EXPANDIDO -->
-    <section class="section section-darker">
-        
-        
-    <!-- BRUTAL 3D TIMELINE -->
-    <section class="section" id="timeline-section" style="position: relative; overflow: hidden; padding: 12rem 5%;">
-        <!-- Localized ThreeJS Canvas for Timeline Background -->
-        <div id="timeline-canvas-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.7;"></div>
-        
-        <div style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;">
-            <h2 class="section-title" style="text-align: center; margin-bottom: 6rem; text-shadow: 0 0 20px rgba(247,72,75,0.5);">Trayectoria y Experiencia <br><span style="color:#fff; font-size:0.6em;">como Dise├▒ador Gr├ífico en Barcelona</span></h2>
-            
-            <div class="timeline-3d-container">
-                
-                <div class="t3d-node">
-                    <div class="t3d-glass-card">
-                        <div class="t3d-glow"></div>
-                        <div class="t3d-date">2023 - PRESENT</div>
-                        <h3 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">Dise├▒ador Gr├ífico & Lead Front-End Architect</h3>
-                        <div style="font-family: var(--font-body); color: #f8fafc; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Vestra Solutions / VestraWeb</div>
-                        <p>Direcci├│n t├®cnica de plataformas de alto rendimiento. Desarrollo de arquitecturas headless, integraciones B2B complejas (APIs, Webhooks, CRMs) y sistemas de automatizaci├│n con IA. Optimizaci├│n milim├®trica de LCP/CLS y escalabilidad de servidores.</p>
-                    </div>
-                </div>
+    <include src="components/disenador-grafico-barcelona-portfolio.html"></include>
 
-                <div class="t3d-node">
-                    <div class="t3d-glass-card">
-                        <div class="t3d-glow"></div>
-                        <div class="t3d-date">SISTEMAS B2B CORE</div>
-                        <h3 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">UI Design para Sistema Multi-Tenant</h3>
-                        <div style="font-family: var(--font-body); color: #f8fafc; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Desarrollo Interno Corporativo</div>
-                        <p>Dise├▒o y despliegue de un procesador de emails en Python con webhooks para analizar flujos masivos de correos B2B (proveedores de veh├¡culos). Extracci├│n de datos en tiempo real mediante LLMs y sincronizaci├│n directa con bases de datos MySQL, ahorrando cientos de horas mensuales.</p>
-                    </div>
-                </div>
-
-                <div class="t3d-node">
-                    <div class="t3d-glass-card">
-                        <div class="t3d-glow"></div>
-                        <div class="t3d-date">FINTECH SECTOR</div>
-                        <h3 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">Dise├▒ador Gr├ífico UI/UX - Gelt Dashboard</h3>
-                        <div style="font-family: var(--font-body); color: #f8fafc; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Dashboard de Conciliaci├│n Financiera</div>
-                        <p>Dise├▒├® y desarroll├® un Dashboard robusto (React/Vite) que captura la informaci├│n transaccional y automatiza el cotejo cruzado contra entidades (Addi, Brilla, Superintendencia). Conciliaci├│n inmediata y 100% libre de errores humanos.</p>
-                    </div>
-                </div>
-
-                <div class="t3d-node">
-                    <div class="t3d-glass-card">
-                        <div class="t3d-glow"></div>
-                        <div class="t3d-date">SECTOR COMERCIAL VENTA</div>
-                        <h3 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; font-weight:bold;">Dise├▒o Gr├ífico de CRM con IA Aut├│noma</h3>
-                        <div style="font-family: var(--font-body); color: #f8fafc; font-weight: 500; font-size: 1.1rem; margin-bottom: 1.5rem;">Camacho Phones Corp</div>
-                        <p>Desarroll├® un CRM a medida con Dashboard administrativo e integr├® un agente de Inteligencia Artificial (LLM) que atiende WhatsApp de forma totalmente aut├│noma. Perfila clientes, responde consultas y cierra ventas reales.</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-
-    <!-- PORTFOLIO SECTION CON TITLES -->
-    <!-- PORTFOLIO SECTION CON TITLES -->
-    <section class="section">
-        <h2 class="section-title">Portfolio: Proyectos de Dise├▒o Gr├ífico en Barcelona</h2>
-        <div class="pro-gallery">
-            <div class="pro-card">
-                <div class="pro-card-inner">
-                    <img src="/assets/diseno-web-barcelona-ecommerce-mellows-1.jpg" alt="Dise├▒ador Gr├ífico en Barcelona para Mellows Ecommerce" title="Proyecto E-Commerce Mellows - Dise├▒ador Gr├ífico en Barcelona" class="pro-image" loading="lazy">
-                    <div class="pro-overlay">
-                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; font-weight:bold;">Dise├▒o E-commerce Mellows</h3>
-                        <p>E-commerce WordPress UX/UI a Medida</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pro-card">
-                <div class="pro-card-inner">
-                    <img src="/assets/diseno-web-barcelona-estudio-arquitectura-au-1.jpg" alt="Agencia de Dise├▒ador Gr├ífico en Barcelona AU Arquitectos" title="Corporativo AU Arquitectos - Dise├▒ador Gr├ífico en Barcelona" class="pro-image" loading="lazy">
-                    <div class="pro-overlay">
-                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; font-weight:bold;">Branding AU Arquitectos Barcelona</h3>
-                        <p>Dise├▒o Corporativo Brutalista y SEO</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pro-card">
-                <div class="pro-card-inner">
-                    <img src="/assets/diseno-web-barcelona-marca-personal-jordina-1.jpg" alt="Desarrollo Web WordPress Barcelona Jordina Arnau" title="Marca Personal Jordina Arnau - Dise├▒ador Gr├ífico en Barcelona" class="pro-image" loading="lazy">
-                    <div class="pro-overlay">
-                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; font-weight:bold;">Dise├▒o Web Personal Jordina Arnau</h3>
-                        <p>Identidad Visual y Web Personal</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pro-card">
-                <div class="pro-card-inner">
-                    <img src="/assets/diseno-web-barcelona-ong-donaciones-1.jpg" alt="Dise├▒ador Gr├ífico en Barcelona para ONG Compassionate Christmas" title="Plataforma de Donaciones ONG - Dise├▒ador Gr├ífico en Barcelona" class="pro-image" loading="lazy">
-                    <div class="pro-overlay">
-                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; font-weight:bold;">UI/UX ONG Compassionate Christmas</h3>
-                        <p>Plataforma de Donaciones Segura</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pro-card">
-                <div class="pro-card-inner">
-                    <img src="/assets/diseno-web-barcelona-restaurante-selva-1.png" alt="Desarrollo y Dise├▒ador Gr├ífico en Barcelona Selva Sabores" title="Plataforma Selva Sabores - Dise├▒ador Gr├ífico en Barcelona" class="pro-image" loading="lazy">
-                    <div class="pro-overlay">
-                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; font-weight:bold;">Dise├▒o Gr├ífico Web Selva de Sabores</h3>
-                        <p>Plataforma Gastron├│mica Interactiva Total</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pro-card">
-                <div class="pro-card-inner">
-                    <img src="/assets/diseno-web-barcelona-asociacion-cultural-1.jpg" alt="Dise├▒ador Gr├ífico en Barcelona Asociaci├│n Ball de Lletres" title="Asociaci├│n Cultural - Dise├▒ador Gr├ífico en Barcelona" class="pro-image" loading="lazy">
-                    <div class="pro-overlay">
-                        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; font-weight:bold;">Dise├▒o Visual Ball de Lletres</h3>
-                        <p>Portal Cultural e Informativo</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW PREMIUM COMPONENT: PARALLAX BANNER -->
-    <section class="section parallax-banner" style="background-image: url('/assets/mokko_parallax-scaled.jpg'); background-attachment: fixed; background-position: center; background-size: cover; text-align: center; display: flex; align-items: center; justify-content: center; min-height: 400px; position: relative;">
-        <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(5,5,5,0.7);"></div>
-        <div class="h2" style="font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4.5rem); color: #fff; position: relative; z-index: 2; text-transform: uppercase;">
-            M├ís de 7 A├▒os de <span style="color: var(--color-primary);">Vanguardia T├®cnica</span>
-        </div>
-    </section>
-
-    
-
-    <footer class="cyber-footer">
-        <h2 style="font-family: var(--font-heading); color: #fff; font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 2rem;">¿DESPLEGAMOS TU PLATAFORMA?</h2>
-        <a href="mailto:hello@vestraweb.es" class="cyber-btn" title="Contactar con Mario Ocampo Diseñador Gráfico en Barcelona">INICIAR SECUENCIA</a>
-    </footer>
-
+    <include src="components/disenador-grafico-barcelona-parallax.html"></include>
     
     <!-- 16. Footer -->
     
@@ -1049,39 +829,41 @@
             container.appendChild(renderer.domElement);
 
             const geometry = new THREE.BufferGeometry();
-            const count = 3000;
+            const count = 5000;
             const positions = new Float32Array(count * 3);
             const colors = new Float32Array(count * 3);
             const color = new THREE.Color(0xf7484b);
+            const colorDark = new THREE.Color(0x661520);
 
             for(let i = 0; i < count; i++) {
-                positions[i*3] = (Math.random() - 0.5) * 100;
-                positions[i*3+1] = 0; 
-                positions[i*3+2] = (Math.random() - 0.5) * 100;
+                positions[i*3] = (Math.random() - 0.5) * 80;
+                positions[i*3+1] = (Math.random() - 0.5) * 40; 
+                positions[i*3+2] = (Math.random() - 0.5) * 80;
 
-                colors[i*3] = color.r;
-                colors[i*3+1] = color.g;
-                colors[i*3+2] = color.b;
+                const mix = Math.random();
+                colors[i*3] = color.r * mix + colorDark.r * (1 - mix);
+                colors[i*3+1] = color.g * mix + colorDark.g * (1 - mix);
+                colors[i*3+2] = color.b * mix + colorDark.b * (1 - mix);
             }
 
             geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
             geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
             const material = new THREE.PointsMaterial({
-                size: 0.15,
+                size: 0.35,
                 vertexColors: true,
                 transparent: true,
-                opacity: 0.8,
-                blending: THREE.AdditiveBlending
+                opacity: 0.9,
+                blending: THREE.AdditiveBlending,
+                sizeAttenuation: true
             });
 
             const particles = new THREE.Points(geometry, material);
-            particles.position.y = -5;
             scene.add(particles);
 
-            camera.position.z = 10;
-            camera.position.y = 2;
-            camera.rotation.x = -0.2;
+            camera.position.z = 20;
+            camera.position.y = 0;
+            camera.lookAt(0, 0, 0);
 
             let mouseX = 0; let mouseY = 0;
             document.addEventListener('mousemove', (e) => {
@@ -1092,19 +874,23 @@
             let time = 0;
             function animate() {
                 requestAnimationFrame(animate);
-                time += 0.01;
+                time += 0.005;
 
                 const positions = particles.geometry.attributes.position.array;
                 for(let i = 0; i < count; i++) {
                     const x = positions[i*3];
                     const z = positions[i*3+2];
-                    positions[i*3+1] = Math.sin(x * 0.1 + time) * 2 + Math.cos(z * 0.1 + time) * 2;
+                    positions[i*3+1] += Math.sin(x * 0.05 + time * 2) * 0.02 + Math.cos(z * 0.05 + time * 2) * 0.02;
+                    // Slowly drift particles
+                    positions[i*3] += Math.sin(time + i) * 0.005;
+                    positions[i*3+2] += Math.cos(time + i) * 0.005;
                 }
                 particles.geometry.attributes.position.needsUpdate = true;
+                particles.rotation.y = time * 0.1;
                 
-                camera.position.x += (mouseX * 5 - camera.position.x) * 0.05;
-                camera.position.y += (-mouseY * 3 - (camera.position.y - 2)) * 0.05;
-                camera.lookAt(0, -2, -10);
+                camera.position.x += (mouseX * 3 - camera.position.x) * 0.02;
+                camera.position.y += (-mouseY * 3 - camera.position.y) * 0.02;
+                camera.lookAt(0, 0, 0);
 
                     renderer.render(scene, camera);
             }
@@ -1118,7 +904,10 @@
         }
 
         function initGSAP() {
-            if (typeof gsap === 'undefined') return;
+            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+                setTimeout(initGSAP, 100);
+                return;
+            }
             gsap.registerPlugin(ScrollTrigger);
             
             gsap.from(".hero-title", { y: 100, opacity: 0, duration: 1.2, ease: "power4.out" });
@@ -1296,6 +1085,6 @@
         }
         setInterval(updateHeroClock, 1000);
         updateHeroClock();
-    </script>
+    <script type="module" src="/main.js"></script>
 </body>
 </html>

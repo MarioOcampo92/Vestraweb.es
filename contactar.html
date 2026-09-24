@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="preload" as="image" href="/assets/vestra-logo-gradient.svg" type="image/svg+xml">
     <include src="components/head.html"></include>
     <meta name="robots" content="noindex">
 </head>
@@ -8,7 +9,7 @@
     <header class="header">
         <div class="logo">
             <a href="/" style="display: flex; align-items: center; text-decoration: none;">
-                <img src="/assets/vestra-logo-gradient.svg" alt="VestraWeb - Agencia de Diseño Web y SEO en Tarragona" style="height: 32px;" fetchpriority="high">
+                <img src="/assets/vestra-logo-gradient.svg" alt="Agencia de Diseño Web y SEO en Tarragona" style="height: 32px;" fetchpriority="high">
             </a>
         </div>
         <nav class="nav-links">
@@ -87,7 +88,7 @@
                 
                 <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
                     <input type="checkbox" name="legal_accept" required style="margin-top: 0.25rem;">
-                    <span>He leído y acepto la Política de Privacidad.</span>
+                    <span>He leído y acepto la <a href="/privacidad" target="_blank" style="text-decoration: underline; color: inherit;">Política de Privacidad</a>.</span>
                 </label>
             </div>
             <button type="submit" class="btn-contact-submit">Enviar Mensaje</button>
