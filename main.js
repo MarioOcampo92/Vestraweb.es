@@ -140,74 +140,75 @@ function initCoreUI() {
 }
 
 // 3. DEFERRED GSAP & SCROLL TRIGGER (Loads on user interaction or idle)
-let gsapLoaded = false;
-async function setupGsap() {
-  if (gsapLoaded) return;
-  gsapLoaded = true;
+let gsapPromise = null;
+function setupGsap() {
+  if (gsapPromise) return gsapPromise;
+  gsapPromise = (async () => {
+    await loadScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js");
+    await loadScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js");
 
-  await loadScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js");
-  await loadScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js");
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    gsap.registerPlugin(ScrollTrigger);
 
-  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-  gsap.registerPlugin(ScrollTrigger);
-
-  // Staggered cards
-  const staggerElements = gsap.utils.toArray('.project-card, .blog-card, .step, .service-card, .process-step, .slider-item');
-  staggerElements.forEach((el, i) => {
-    gsap.fromTo(el, { opacity: 0, y: 35 }, {
-      scrollTrigger: { trigger: el, start: "top 92%", toggleActions: "play none none reverse" },
-      opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: (i % 3) * 0.1
-    });
-  });
-
-  // Empresas logos stagger
-  gsap.utils.toArray('.empresas-logos > *').forEach((el, i) => {
-    gsap.fromTo(el, { opacity: 0, y: 15 }, {
-      scrollTrigger: { trigger: '.empresas', start: "top 85%", toggleActions: "play none none reverse" },
-      opacity: 1, y: 0, duration: 0.6, delay: i * 0.06, ease: "power2.out"
-    });
-  });
-
-  // Case study gallery stagger
-  gsap.utils.toArray('.case-gallery img').forEach((el, i) => {
-    gsap.fromTo(el, { opacity: 0, y: 30, scale: 0.96 }, {
-      scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none reverse" },
-      opacity: 1, y: 0, scale: 1, duration: 0.7, delay: i * 0.08, ease: "power2.out"
-    });
-  });
-
-  // Parallax effects
-  const parallaxBanner = document.querySelector('.parallax-banner');
-  if (parallaxBanner) {
-    gsap.to(parallaxBanner, {
-      scrollTrigger: { trigger: parallaxBanner, start: "top bottom", end: "bottom top", scrub: true },
-      backgroundPositionY: "60%", ease: "none"
-    });
-  }
-
-  // Ticker track scrub
-  const tickerTrack = document.querySelector('.ticker-track');
-  if (tickerTrack) {
-    tickerTrack.innerHTML += tickerTrack.innerHTML + tickerTrack.innerHTML;
-    gsap.to(tickerTrack, {
-      xPercent: -30,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".ticker",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 1
-      }
+    // Staggered cards
+    const staggerElements = gsap.utils.toArray('.project-card, .blog-card, .step, .service-card, .process-step, .slider-item');
+    staggerElements.forEach((el, i) => {
+      gsap.fromTo(el, { opacity: 0, y: 35 }, {
+        scrollTrigger: { trigger: el, start: "top 92%", toggleActions: "play none none reverse" },
+        opacity: 1, y: 0, duration: 0.8, ease: "power3.out", delay: (i % 3) * 0.1
+      });
     });
 
-    const tickerSpans = tickerTrack.querySelectorAll('span');
-    tickerSpans.forEach((span, index) => {
-      if (index % 3 === 0) span.classList.add('filled');
+    // Empresas logos stagger
+    gsap.utils.toArray('.empresas-logos > *').forEach((el, i) => {
+      gsap.fromTo(el, { opacity: 0, y: 15 }, {
+        scrollTrigger: { trigger: '.empresas', start: "top 85%", toggleActions: "play none none reverse" },
+        opacity: 1, y: 0, duration: 0.6, delay: i * 0.06, ease: "power2.out"
+      });
     });
-  }
+
+    // Case study gallery stagger
+    gsap.utils.toArray('.case-gallery img').forEach((el, i) => {
+      gsap.fromTo(el, { opacity: 0, y: 30, scale: 0.96 }, {
+        scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none reverse" },
+        opacity: 1, y: 0, scale: 1, duration: 0.7, delay: i * 0.08, ease: "power2.out"
+      });
+    });
+
+    // Parallax effects
+    const parallaxBanner = document.querySelector('.parallax-banner');
+    if (parallaxBanner) {
+      gsap.to(parallaxBanner, {
+        scrollTrigger: { trigger: parallaxBanner, start: "top bottom", end: "bottom top", scrub: true },
+        backgroundPositionY: "60%", ease: "none"
+      });
+    }
+
+    // Ticker track scrub
+    const tickerTrack = document.querySelector('.ticker-track');
+    if (tickerTrack) {
+      tickerTrack.innerHTML += tickerTrack.innerHTML + tickerTrack.innerHTML;
+      gsap.to(tickerTrack, {
+        xPercent: -30,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".ticker",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1
+        }
+      });
+
+      const tickerSpans = tickerTrack.querySelectorAll('span');
+      tickerSpans.forEach((span, index) => {
+        if (index % 3 === 0) span.classList.add('filled');
+      });
+    }
+  })();
+  return gsapPromise;
 }
 
-// 4. LAZY THREE.JS SPHERE (Only loaded when approaching viewport)
+// 4. LAZY THREE.JS SPHERE (Only loaded when approaching viewport, guaranteed GSAP zoom)
 let threeLoaded = false;
 function setupThreeJsLazy() {
   const canvasContainer = document.getElementById('canvas-container');
@@ -217,11 +218,14 @@ function setupThreeJsLazy() {
     if (entries[0].isIntersecting) {
       observer.disconnect();
       threeLoaded = true;
-      loadScript("https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js").then(() => {
+      Promise.all([
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"),
+        setupGsap()
+      ]).then(() => {
         initThreeSphere(canvasContainer);
       });
     }
-  }, { rootMargin: '200px' });
+  }, { rootMargin: '300px' });
 
   observer.observe(canvasContainer);
 }
@@ -292,6 +296,52 @@ function initThreeSphere(canvasContainer) {
     camera.updateProjectionMatrix();
     renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight);
   }, { passive: true });
+
+  // ===== AWWWARDS SCROLL EFFECT: ENGULFING ORB (ZOOM EFFECT) =====
+  const orbSection = document.getElementById('orb-section');
+  if (orbSection && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    let mm = gsap.matchMedia();
+
+    // Desktop: 2-column layout. Pin it, fade text, and engulf screen (zoom).
+    mm.add("(min-width: 769px)", () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: orbSection,
+          start: 'top top',
+          end: '+=150%',
+          scrub: 1,
+          pin: true
+        }
+      });
+      
+      tl.to(wireShape.scale, { x: 3, y: 3, z: 3, duration: 1 })
+        .to(particleMesh.scale, { x: 3, y: 3, z: 3, duration: 1 }, '<')
+        .to('.orb-text', { opacity: 0, x: 50, duration: 1 })
+        .to(wireShape.scale, { x: 30, y: 30, z: 30, duration: 2 }, '<')
+        .to(particleMesh.scale, { x: 30, y: 30, z: 30, duration: 2 }, '<')
+        .to(particlesMaterial, { opacity: 0, duration: 1 });
+    });
+
+    // Mobile: 1-column layout. No pinning, text stays visible, subtle parallax orb.
+    mm.add("(max-width: 768px)", () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: orbSection,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1,
+          pin: false
+        }
+      });
+      
+      tl.to(wireShape.scale, { x: 1.5, y: 1.5, z: 1.5, duration: 1 })
+        .to(particleMesh.scale, { x: 1.5, y: 1.5, z: 1.5, duration: 1 }, '<')
+        .to(wireShape.position, { y: 2, duration: 1 }, '<')
+        .to(particleMesh.position, { y: 2, duration: 1 }, '<');
+    });
+
+    ScrollTrigger.refresh();
+  }
 }
 
 // 5. DESKTOP-ONLY VANILLA TILT (Completely skipped on mobile)
