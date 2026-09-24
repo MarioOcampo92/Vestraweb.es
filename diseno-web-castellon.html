@@ -102,10 +102,47 @@
             --cs-card-border: rgba(255, 255, 255, 0.08);
         }
 
+        /* Header in dark mode */
+        .header {
+            background: rgba(10, 10, 16, 0.92) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            backdrop-filter: blur(24px) !important;
+            -webkit-backdrop-filter: blur(24px) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+        }
+        .header a, .nav-links a {
+            color: #f3f4f6 !important;
+        }
+        .header a:hover, .nav-links a:hover {
+            color: var(--color-primary) !important;
+        }
+        .nav-dropdown-content {
+            background: rgba(15, 15, 22, 0.96) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
+        }
+        .search-icon-btn, .hamburger-icon-btn {
+            color: #f3f4f6 !important;
+        }
+
+        /* Fixed logos on dark theme */
+        .empresas-logos img {
+            filter: brightness(0) invert(1) !important;
+            opacity: 0.85 !important;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            max-height: 38px;
+            max-width: 140px;
+            object-fit: contain;
+        }
+        .empresas-logos img:hover {
+            opacity: 1 !important;
+            transform: scale(1.06);
+        }
+
         /* Hero Custom */
         .cs-hero-container {
             position: relative;
-            padding: 9rem 1.5rem 5rem;
+            padding: 9.5rem 1.5rem 5rem;
             min-height: 85vh;
             display: flex;
             align-items: center;
@@ -228,13 +265,24 @@
             padding: 6rem 1.5rem;
             position: relative;
         }
+        #orb-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 7.5rem 1.5rem 4rem;
+            position: relative;
+            overflow: hidden;
+            background: #09090e;
+        }
         .cs-bento-split {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
-            gap: 3rem;
+            gap: 3.5rem;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
         }
         .cs-glass-panel {
             background: rgba(18, 18, 24, 0.6);
@@ -330,6 +378,7 @@
             justify-content: center;
             font-size: 0.85rem;
             flex-shrink: 0;
+            margin-bottom: 0.5rem;
         }
 
         /* Distinct Mid CTA */
@@ -355,13 +404,105 @@
             margin: 3rem auto 0;
         }
 
-        @media (max-width: 900px) {
-            .cs-bento-split, .cs-contact-split {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+        /* Mobile First Responsive Overrides */
+        @media (max-width: 768px) {
+            .header {
+                top: 0.75rem !important;
+                width: calc(100% - 1.5rem) !important;
+                padding: 0.75rem 1.25rem !important;
+            }
+            .nav-links {
+                background: rgba(12, 12, 18, 0.98) !important;
+                border: 1px solid rgba(255, 255, 255, 0.15) !important;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8) !important;
             }
             .cs-hero-container {
-                padding-top: 7rem;
+                padding: 6.5rem 1.25rem 3rem !important;
+                min-height: auto !important;
+            }
+            .cs-hero-badge {
+                font-size: 0.78rem !important;
+                padding: 0.35rem 0.85rem !important;
+                line-height: 1.3;
+            }
+            .cs-hero-title {
+                font-size: 2.2rem !important;
+                line-height: 1.15 !important;
+            }
+            .cs-hero-sub {
+                font-size: 1rem !important;
+                margin-bottom: 2rem !important;
+            }
+            .cs-hero-cta-group {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.85rem;
+            }
+            .cs-btn-glow, .cs-btn-glass {
+                width: 100%;
+                max-width: 340px;
+                justify-content: center;
+                padding: 0.95rem 1.5rem !important;
+                font-size: 0.95rem !important;
+            }
+            .cs-stats-strip {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 1.25rem !important;
+                padding-top: 1.75rem !important;
+            }
+            .cs-stat-number {
+                font-size: 1.75rem !important;
+            }
+            .cs-stat-label {
+                font-size: 0.75rem !important;
+            }
+            #orb-section {
+                min-height: auto !important;
+                padding: 4.5rem 1.25rem 3rem !important;
+                display: block !important;
+            }
+            .cs-bento-split {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+                text-align: center;
+            }
+            .orb-wrapper {
+                height: 280px !important;
+            }
+            .cs-glass-panel {
+                padding: 1.5rem !important;
+                border-radius: 1.25rem !important;
+            }
+            .cs-process-deck {
+                grid-template-columns: 1fr !important;
+                gap: 1.25rem !important;
+            }
+            .cs-process-card {
+                padding: 1.5rem !important;
+            }
+            .cs-expert-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            .cs-expert-card {
+                padding: 1.35rem !important;
+            }
+            .cs-cta-banner {
+                padding: 3rem 1.25rem !important;
+                border-radius: 1.5rem !important;
+            }
+            .cs-contact-split {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            .empresas-logos {
+                gap: 1.75rem 2rem !important;
+            }
+            .empresas-logos img {
+                max-height: 30px !important;
+            }
+            .contact-form input, .contact-form textarea {
+                font-size: 16px !important;
             }
         }
     </style>
@@ -506,15 +647,15 @@
                 EMPRESAS QUE HAN TRABAJADO CON NOSOTROS
             </div>
 
-            <div class="empresas-logos" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2.5rem 3.5rem; opacity: 0.85;">
-                <img src="/assets/cliente-diseno-web-castellon-boletarium.svg" alt="Cliente de diseno web castellon: Boletarium" width="140" height="40" style="height: 35px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
-                <img src="/assets/cliente-diseno-web-castellon-selva-de-sabores.webp" alt="Proyecto de diseno web castellon para Selva de Sabores" width="61" height="61" style="height: 45px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
-                <img src="/assets/cliente-diseno-web-castellon-jordina-arnau.webp" alt="Cliente de diseno web castellon: Jordina Arnau" width="210" height="23" style="height: 24px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
-                <img src="/assets/cliente-diseno-web-castellon-cri.svg" alt="Desarrollo web en castellon para CRI" width="120" height="30" style="height: 30px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
-                <img src="/assets/cliente-diseno-web-castellon-jmj.webp" alt="Diseño de página web en castellon para JMJ" width="196" height="61" style="height: 36px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
-                <img src="/assets/cliente-diseno-web-castellon-jo-brand.png" alt="Cliente de diseno web castellon: JO BRAND" width="100" height="60" style="height: 35px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
-                <img src="/assets/cliente-diseno-web-castellon-siete-mandarinas.webp" alt="Proyecto web en castellon para Siete Mandarinas" width="210" height="58" style="height: 32px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
-                <img src="/assets/cliente-diseno-web-castellon-la-rita.png" alt="Cliente de diseno web castellon: La Rita" width="130" height="40" style="height: 30px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
+            <div class="empresas-logos" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2.5rem 3.5rem;">
+                <img src="/assets/cliente-diseno-web-castellon-boletarium.svg" alt="Cliente de diseno web castellon: Boletarium" width="140" height="40" style="height: 35px; width: auto;" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-selva-de-sabores.webp" alt="Proyecto de diseno web castellon para Selva de Sabores" width="61" height="61" style="height: 45px; width: auto;" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-jordina-arnau.webp" alt="Cliente de diseno web castellon: Jordina Arnau" width="210" height="23" style="height: 24px; width: auto;" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-cri.svg" alt="Desarrollo web en castellon para CRI" width="120" height="30" style="height: 30px; width: auto;" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-jmj.webp" alt="Diseño de página web en castellon para JMJ" width="196" height="61" style="height: 36px; width: auto;" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-jo-brand.png" alt="Cliente de diseno web castellon: JO BRAND" width="100" height="60" style="height: 35px; width: auto;" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-siete-mandarinas.webp" alt="Proyecto web en castellon para Siete Mandarinas" width="210" height="58" style="height: 32px; width: auto;" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-la-rita.png" alt="Cliente de diseno web castellon: La Rita" width="130" height="40" style="height: 30px; width: auto;" loading="lazy">
             </div>
         </div>
     </section>
