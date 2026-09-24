@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño Web en Castellón | Sitios web rápidos y SEO</title>
-    <meta name="description" content="Impulsa tu negocio en Castellón con diseño web a medida y estrategias de posicionamiento SEO. Creamos páginas web enfocadas en conversión y ventas.">
+    <meta name="description" content="Diseño web profesional en Castellón a medida. Sitios ultra-rápidos, sin plantillas lentas y optimizados para SEO local y conversión por VestraWeb.">
     <meta name="keywords" content="diseño web castellon, desarrollo web castellon, diseño web castellon de la plana, posicionamiento seo castellon, agencia web castellon, crear pagina web castellon">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="shortcut icon" href="/favicon.svg">
@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet"></noscript>
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -88,8 +89,285 @@
     <link rel="canonical" href="https://vestraweb.es/diseno-web-castellon">
     <meta name="author" content="VestraWeb">
     <meta name="publisher" content="VestraWeb">
+
+    <style>
+        /* ========================================================
+           ESTILOS EXCLUSIVOS CASTELLÓN (COMPOSICIÓN TOTALMENTE DIFERENTE)
+           Línea gráfica premium: Dark Glassmorphism, Gradient Glows, Bento
+           ======================================================== */
+        :root {
+            --cs-gradient: linear-gradient(135deg, #f8b54a 0%, #f7484b 50%, #8849f6 100%);
+            --cs-glow: rgba(247, 72, 75, 0.15);
+            --cs-card-bg: rgba(255, 255, 255, 0.03);
+            --cs-card-border: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Hero Custom */
+        .cs-hero-container {
+            position: relative;
+            padding: 9rem 1.5rem 5rem;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 20%, rgba(247,72,75,0.08) 0%, rgba(5,5,8,0.98) 70%);
+        }
+        .cs-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--cs-card-border);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #f8b54a;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        .cs-hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cs-gradient-text {
+            background: var(--cs-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        .cs-hero-sub {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: #9ca3af;
+            max-width: 720px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.6;
+        }
+        .cs-hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 3.5rem;
+        }
+        .cs-btn-glow {
+            background: var(--cs-gradient);
+            color: #fff !important;
+            padding: 1rem 2.2rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(247, 72, 75, 0.35);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .cs-btn-glow:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(247, 72, 75, 0.5);
+        }
+        .cs-btn-glass {
+            background: rgba(255, 255, 255, 0.05);
+            color: #f3f4f6 !important;
+            padding: 1rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--cs-card-border);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .cs-btn-glass:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        .cs-stats-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+            border-top: 1px solid var(--cs-card-border);
+            padding-top: 2.5rem;
+        }
+        .cs-stat-item {
+            text-align: center;
+        }
+        .cs-stat-number {
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: var(--cs-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.2rem;
+        }
+        .cs-stat-label {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        /* Intro & Bento Split Showcase */
+        .cs-section {
+            padding: 6rem 1.5rem;
+            position: relative;
+        }
+        .cs-bento-split {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .cs-glass-panel {
+            background: rgba(18, 18, 24, 0.6);
+            border: 1px solid var(--cs-card-border);
+            border-radius: 1.75rem;
+            padding: 2.5rem;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .cs-glass-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--cs-gradient);
+        }
+
+        /* Redesigned Process Deck */
+        .cs-process-deck {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+        .cs-process-card {
+            background: rgba(18, 18, 24, 0.7);
+            border: 1px solid var(--cs-card-border);
+            border-radius: 1.5rem;
+            padding: 2.2rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .cs-process-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(247, 72, 75, 0.4);
+            box-shadow: 0 15px 35px rgba(247, 72, 75, 0.15);
+        }
+        .cs-step-tag {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.1);
+            line-height: 1;
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+        .cs-process-card:hover .cs-step-tag {
+            color: var(--color-primary);
+        }
+
+        /* Redesigned Expert Accordion */
+        .cs-expert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.25rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+        .cs-expert-card {
+            background: rgba(18, 18, 24, 0.6);
+            border: 1px solid var(--cs-card-border);
+            border-radius: 1.25rem;
+            padding: 1.75rem;
+            transition: all 0.3s ease;
+        }
+        .cs-expert-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(25, 25, 35, 0.7);
+        }
+        .cs-expert-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+            color: #fff;
+        }
+        .cs-expert-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            background: rgba(247,72,75,0.15);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        /* Distinct Mid CTA */
+        .cs-cta-banner {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(30, 20, 45, 0.9) 0%, rgba(15, 15, 25, 0.95) 100%);
+            border: 1px solid rgba(247, 72, 75, 0.3);
+            border-radius: 2rem;
+            padding: 4.5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+        }
+
+        /* Contact Section */
+        .cs-contact-split {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3.5rem;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+        }
+
+        @media (max-width: 900px) {
+            .cs-bento-split, .cs-contact-split {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .cs-hero-container {
+                padding-top: 7rem;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="dark-mode" style="background-color: #07070b; color: #f3f4f6;">
+
     <!-- 1. Header -->
     <header class="header">
         <div class="logo">
@@ -121,215 +399,494 @@
         </div>
     </header>
 
-    <!-- 2. Hero & Intro -->
-    <include src="components/castellon-hero.html"></include>
-
-    <!-- 4. Three.js Orb & Scroll Section -->
-    <section class="orb-section" id="orb-section">
-        <div class="container orb-grid">
-            <div class="orb-wrapper gs-reveal-left" id="canvas-container" style="width: 100%; height: 400px; position: relative;">
-                <!-- Three.js Canvas will be injected here -->
+    <!-- 2. Hero & Intro (Bespoke Composition) -->
+    <section class="cs-hero-container">
+        <div class="container" style="text-align: center; position: relative; z-index: 2;">
+            <div class="cs-hero-badge gs-reveal">
+                <span>📍</span> Presencia Física en Castellón de la Plana • Atención Presencial y Directa
             </div>
-            <div class="orb-text">
-                <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; color: var(--color-primary); font-weight: 900; line-height: 1.1;">
+            
+            <!-- Exact H1 for SEO -->
+            <h1 class="cs-hero-title gs-reveal">
+                Diseño Web en <span class="cs-gradient-text">Castellón</span>
+            </h1>
+
+            <!-- Exact H2 for SEO -->
+            <h2 class="intro-title gs-reveal" style="font-size: clamp(1.5rem, 3.5vw, 2.5rem); margin-bottom: 1.5rem; color: #fff; font-weight: 800;">
+                Haz que tu web hable por ti
+            </h2>
+
+            <p class="cs-hero-sub gs-reveal">
+                Creamos plataformas digitales a medida para pymes y marcas de Castellón que exigen velocidad implacable (&lt;1s), posicionamiento orgánico en Google y una experiencia visual de nivel internacional sin plantillas prefabricadas.
+            </p>
+
+            <div class="cs-hero-cta-group gs-reveal">
+                <a href="#contacto" class="cs-btn-glow">
+                    Solicitar Presupuesto Gratis <span>→</span>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=34687180231" target="_blank" rel="noopener noreferrer" class="cs-btn-glass">
+                    <span>💬</span> WhatsApp Directo
+                </a>
+            </div>
+
+            <!-- Metric Stats Strip -->
+            <div class="cs-stats-strip gs-reveal">
+                <div class="cs-stat-item">
+                    <div class="cs-stat-number">&lt; 0.9s</div>
+                    <div class="cs-stat-label">Velocidad de Carga Media</div>
+                </div>
+                <div class="cs-stat-item">
+                    <div class="cs-stat-number">100%</div>
+                    <div class="cs-stat-label">Código a Medida Sin Bloat</div>
+                </div>
+                <div class="cs-stat-item">
+                    <div class="cs-stat-number">+7 Años</div>
+                    <div class="cs-stat-label">Impulsando Negocios Reales</div>
+                </div>
+                <div class="cs-stat-item">
+                    <div class="cs-stat-number">Top 3</div>
+                    <div class="cs-stat-label">Estrategia SEO Local</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Orb & Value Section (Redesigned Split Composition) -->
+    <section class="cs-section" id="orb-section" style="background: #09090e;">
+        <div class="cs-bento-split">
+            <!-- Left: Text & Pitch -->
+            <div class="orb-text gs-reveal-left">
+                <span style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 0.75rem;">
+                    INGENIERÍA WEB Y CONVERSIÓN
+                </span>
+                
+                <!-- Exact H2 for SEO -->
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 1.5rem; color: #fff; font-weight: 900; line-height: 1.15;">
                     Desarrollo y diseño web a tu medida en Castellón
                 </h2>
-                <p style="font-size: 1.2rem;"><strong>¿Tu empresa en Castellón necesita una web que realmente facture?</strong> Desarrollamos soluciones digitales personalizadas, libres de plantillas sobrecargadas, combinando velocidad extrema, experiencia de usuario (UX) impecable e ingeniería web moderna para que superes a tu competencia en la provincia.</p>
-                <p style="font-size: 1.1rem; color: var(--color-text-light);">Especializados en digitalización y posicionamiento para marcas, comercios y empresas del tejido industrial de la Plana. Una página web rápida no es un gasto: es el canal de ventas más rentable de tu negocio.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- 5. Empresas -->
-    <section class="empresas">
-        <div class="h3">EMPRESAS QUE HAN TRABAJADO CON NOSOTROS</div>
-        <div class="empresas-logos">
-            <img src="/assets/cliente-diseno-web-castellon-boletarium.svg" alt="Cliente de diseno web castellon: Boletarium" width="560" height="336" loading="lazy">
-            <img src="/assets/cliente-diseno-web-castellon-selva-de-sabores.png" alt="Proyecto de diseno web castellon para Selva de Sabores" width="200" height="200" loading="lazy">
-            <img src="/assets/cliente-diseno-web-castellon-jordina-arnau.webp" alt="Cliente de diseno web castellon: Jordina Arnau" width="444" height="48" loading="lazy">
-            <img src="/assets/cliente-diseno-web-castellon-cri.svg" alt="Desarrollo web en castellon para CRI" width="198" height="42" loading="lazy">
-            <img src="/assets/cliente-diseno-web-castellon-jmj.png" alt="Diseño de página web en castellon para JMJ" width="735" height="230" loading="lazy">
-            <img src="/assets/cliente-diseno-web-castellon-jo-brand.png" alt="Cliente de diseno web castellon: JO BRAND" width="100" height="60" loading="lazy">
-            <img src="/assets/cliente-diseno-web-castellon-siete-mandarinas.png" alt="Proyecto web en castellon para Siete Mandarinas" width="700" height="192" loading="lazy">
-            <img src="/assets/cliente-diseno-web-castellon-la-rita.png" alt="Cliente de diseno web castellon: La Rita" width="400" height="120" loading="lazy">
-        </div>
-    </section>
+                <p style="font-size: 1.15rem; line-height: 1.7; color: #d1d5db; margin-bottom: 1.25rem;">
+                    <strong>¿Cansado de webs lentas que no generan llamadas ni ventas?</strong> En el mercado de Castellón y la Plana, las empresas compiten cada día con sitios obsoletos montados sobre temas pesados de WordPress. Nosotros diseñamos sitios ultraligeros basados en arquitectura moderna que cargan al instante y convierten a los visitantes en clientes fieles.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.7; color: #9ca3af; margin-bottom: 2rem;">
+                    Desde empresas del sector industrial y cerámico hasta comercios locales y profesionales independientes, te dotamos de una presencia digital que refleja la solidez real de tu empresa.
+                </p>
 
-    <!-- 6. About -->
-    <section class="about">
-        <div class="about-grid">
-            <div class="about-content">
-                <span class="about-label">Sobre Nosotros</span>
-                <h2>Diseño web Castellón</h2>
-                <p>En VestraWeb ayudamos a profesionales, autónomos y empresas de Castellón de la Plana, Vila-real y comarcas colindantes a construir una presencia digital sólida y rentable. No nos limitamos a hacer que tu web sea atractiva: la diseñamos como un motor de captación activa, con tiempos de respuesta instantáneos y una estructura optimizada para conquistar las primeras posiciones de Google.</p>
-                <p style="margin-top: 1rem; color: var(--color-text-light);">Ubicados físicamente en la capital de la Plana, entendemos de primera mano la dinámica del mercado local, el sector industrial cerámico, los comercios de proximidad y las empresas de servicios que buscan expandir su cartera de clientes tanto en la Comunidad Valenciana como a nivel nacional.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <span style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.9rem; background: rgba(255,255,255,0.04); border-radius: 8px; border: 1px solid var(--cs-card-border); font-size: 0.85rem; color: #e5e7eb;">
+                        ✓ Indexación Prioritaria Google
+                    </span>
+                    <span style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.9rem; background: rgba(255,255,255,0.04); border-radius: 8px; border: 1px solid var(--cs-card-border); font-size: 0.85rem; color: #e5e7eb;">
+                        ✓ Diseño Responsive Mobile-First
+                    </span>
+                    <span style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.9rem; background: rgba(255,255,255,0.04); border-radius: 8px; border: 1px solid var(--cs-card-border); font-size: 0.85rem; color: #e5e7eb;">
+                        ✓ Conexión WhatsApp Directa
+                    </span>
+                </div>
             </div>
-            <div class="about-image">
-                <img src="/assets/agencia-diseno-web-castellon-equipo-v2.svg" alt="Equipo de trabajando en diseno web castellon" width="453" height="283" loading="lazy">
-            </div>
-        </div>
-    </section>
 
-    <!-- 7. Process -->
-    <section class="process">
-        <div class="container">
-            <h2>Diseño web sostenible</h2>
-            <h3 class="h2" style="font-size:1.5rem; color:var(--color-primary);">¿Como es el proceso de creación web?</h3>
-            <div class="process-steps">
-                <div class="process-step">
-                    <span>01</span>
-                    <h4 style="font-size: 1.2rem;">¡Hora de diseñar! ¡Vamos a poner en marcha la maquina creativa!</h4>
+            <!-- Right: Interactive Canvas Container -->
+            <div class="cs-glass-panel gs-reveal-right" style="padding: 1.5rem; text-align: center;">
+                <div class="orb-wrapper" id="canvas-container" style="width: 100%; height: 380px; position: relative; border-radius: 1rem; overflow: hidden; background: radial-gradient(circle, rgba(247,72,75,0.08) 0%, rgba(10,10,15,0.5) 100%);">
+                    <!-- Three.js Canvas injected here -->
                 </div>
-                <div class="process-step">
-                    <span>02</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 800;">¿Qué necesito para crear tu página web?</h3>
-                </div>
-                <div class="process-step">
-                    <span>03</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 800;">¿Que necesito para crear una tienda online?</h3>
-                </div>
-                <div class="process-step">
-                    <span>04</span>
-                    <h3 style="font-size: 1.2rem; font-weight: 800;">¿Que necesito para crear tu marca?</h3>
+                <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 1rem; background: rgba(0,0,0,0.3); border-radius: 8px; font-size: 0.8rem; color: #9ca3af;">
+                    <span>Experiencia Interactiva 3D</span>
+                    <span style="color: #25D366; display: flex; align-items: center; gap: 5px;">● Rendimiento 60 FPS</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. Services -->
+    <!-- 5. Empresas Trust Grid -->
+    <section class="cs-section" style="padding: 4rem 1.5rem; border-top: 1px solid var(--cs-card-border); border-bottom: 1px solid var(--cs-card-border); background: #07070b;">
+        <div class="container" style="text-align: center;">
+            <!-- Exact H3 for SEO -->
+            <div class="h3" style="color: #9ca3af; letter-spacing: 3px; font-size: 0.95rem; font-weight: 700; margin-bottom: 2.5rem;">
+                EMPRESAS QUE HAN TRABAJADO CON NOSOTROS
+            </div>
+
+            <div class="empresas-logos" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2.5rem 3.5rem; opacity: 0.85;">
+                <img src="/assets/cliente-diseno-web-castellon-boletarium.svg" alt="Cliente de diseno web castellon: Boletarium" width="140" height="40" style="height: 35px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-selva-de-sabores.webp" alt="Proyecto de diseno web castellon para Selva de Sabores" width="61" height="61" style="height: 45px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-jordina-arnau.webp" alt="Cliente de diseno web castellon: Jordina Arnau" width="210" height="23" style="height: 24px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-cri.svg" alt="Desarrollo web en castellon para CRI" width="120" height="30" style="height: 30px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-jmj.webp" alt="Diseño de página web en castellon para JMJ" width="196" height="61" style="height: 36px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-jo-brand.png" alt="Cliente de diseno web castellon: JO BRAND" width="100" height="60" style="height: 35px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-siete-mandarinas.webp" alt="Proyecto web en castellon para Siete Mandarinas" width="210" height="58" style="height: 32px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
+                <img src="/assets/cliente-diseno-web-castellon-la-rita.png" alt="Cliente de diseno web castellon: La Rita" width="130" height="40" style="height: 30px; width: auto; filter: grayscale(1) brightness(1.5);" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. About Section (Executive Asymmetric Layout) -->
+    <section class="cs-section" style="background: #09090e;">
+        <div class="cs-bento-split">
+            <div class="cs-glass-panel gs-reveal-left">
+                <span class="about-label" style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">
+                    Sobre Nosotros
+                </span>
+                
+                <!-- Exact H2 for SEO -->
+                <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 1.5rem; color: #fff; font-weight: 900;">
+                    Diseño web Castellón
+                </h2>
+
+                <p style="font-size: 1.1rem; line-height: 1.7; color: #d1d5db; margin-bottom: 1.25rem;">
+                    Con presencia real en <strong>Castellón de la Plana</strong>, trabajamos codo con codo con empresarios, comercios y marcas de la provincia (Vila-real, Almassora, Benicàssim, Onda y Grao) para transformar su huella digital en un activo rentable.
+                </p>
+                <p style="font-size: 1rem; line-height: 1.7; color: #9ca3af; margin-bottom: 2rem;">
+                    Creemos firmemente en el desarrollo honesto: cada línea de código está pensada para responder a las preguntas exactas que tus clientes hacen en Google, eliminando tiempos de carga innecesarios y garantizando la mejor tasa de contacto.
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--cs-card-border); padding-top: 1.5rem;">
+                    <div>
+                        <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 0.2rem;">🤝 Trato Local</div>
+                        <div style="font-size: 0.85rem; color: #9ca3af;">Reuniones presenciales o telemáticas en Castellón.</div>
+                    </div>
+                    <div>
+                        <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 0.2rem;">🚀 Sin Intermediarios</div>
+                        <div style="font-size: 0.85rem; color: #9ca3af;">Hablas directamente con el desarrollador senior.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image gs-reveal-right" style="text-align: center;">
+                <img src="/assets/agencia-diseno-web-castellon-equipo-v2.svg" alt="Equipo de trabajando en diseno web castellon" width="453" height="283" style="max-width: 100%; height: auto; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Process Section (Redesigned 4-Card Strategic Deck) -->
+    <section class="cs-section" style="background: #07070b; border-top: 1px solid var(--cs-card-border);">
+        <div class="container" style="text-align: center; max-width: 1200px; margin: 0 auto;">
+            <!-- Exact H2 for SEO -->
+            <h2 style="font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; margin-bottom: 0.5rem; color: #fff;">
+                Diseño web sostenible
+            </h2>
+            
+            <!-- Exact H3 for SEO -->
+            <h3 class="h2" style="font-size: 1.4rem; color: var(--color-primary); font-weight: 600; margin-bottom: 1rem;">
+                ¿Como es el proceso de creación web?
+            </h3>
+            
+            <p style="color: #9ca3af; max-width: 650px; margin: 0 auto 3rem;">
+                Un método ágil en 4 fases diseñado para entregarte una plataforma lista para vender, sin retrasos ni dolores de cabeza.
+            </p>
+
+            <div class="cs-process-deck">
+                <!-- Step 01 -->
+                <div class="cs-process-card gs-reveal">
+                    <div>
+                        <div class="cs-step-tag">01</div>
+                        <!-- Exact H4 for SEO -->
+                        <h4 style="font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 1rem; line-height: 1.3;">
+                            ¡Hora de diseñar! ¡Vamos a poner en marcha la maquina creativa!
+                        </h4>
+                        <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                            Analizamos tu competencia en Castellón, definimos tu propuesta de valor única y creamos prototipos interactivos que enamoran a primera vista.
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.5rem; font-size: 0.8rem; color: #f8b54a; font-weight: 600;">
+                        Fase: Conceptualización y Wireframes
+                    </div>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="cs-process-card gs-reveal">
+                    <div>
+                        <div class="cs-step-tag">02</div>
+                        <!-- Exact H3 for SEO -->
+                        <h3 style="font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 1rem; line-height: 1.3;">
+                            ¿Qué necesito para crear tu página web?
+                        </h3>
+                        <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                            Solo tus servicios, fotos de tu negocio o catálogo base. Nosotros nos encargamos de redactar textos persuasivos y estructurar la arquitectura técnica.
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.5rem; font-size: 0.8rem; color: var(--color-primary); font-weight: 600;">
+                        Fase: Contenidos y Arquitectura
+                    </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="cs-process-card gs-reveal">
+                    <div>
+                        <div class="cs-step-tag">03</div>
+                        <!-- Exact H3 for SEO -->
+                        <h3 style="font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 1rem; line-height: 1.3;">
+                            ¿Que necesito para crear una tienda online?
+                        </h3>
+                        <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                            Tus métodos de pago deseados (Stripe, Bizum, Redsys) y tus condiciones de envío. Integramos pasarelas seguras y gestión de stock automatizada.
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.5rem; font-size: 0.8rem; color: #8849f6; font-weight: 600;">
+                        Fase: Pasarelas y Catálogo Ecommerce
+                    </div>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="cs-process-card gs-reveal">
+                    <div>
+                        <div class="cs-step-tag">04</div>
+                        <!-- Exact H3 for SEO -->
+                        <h3 style="font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 1rem; line-height: 1.3;">
+                            ¿Que necesito para crear tu marca?
+                        </h3>
+                        <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                            Tu visión empresarial. Creamos paletas de color modernas, logotipos vectoriales nítidos y manuales de identidad para destacar frente a tus competidores.
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.5rem; font-size: 0.8rem; color: #25D366; font-weight: 600;">
+                        Fase: Identidad y Lanzamiento
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Services Section (Include with Custom Header Hierarchy) -->
     <include src="components/castellon-services.html"></include>
 
-    <!-- Expert Section -->
-    <section class="expert-section" style="padding: 4rem 0; background-color: var(--color-bg-alt);">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem; text-transform: uppercase;">Experto en Diseño de Páginas Web</h2>
-            <div class="accordion">
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3 style="text-transform: none; font-size: 1.1rem;">Sitios webs editables</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Diseñamos entornos de administración sencillos, limpios y a tu medida para que actualices catálogos, noticias y datos de contacto en segundos sin tocar código.</p>
-                    </div>
+    <!-- 8B. Expert Accordion Section (Sleek Glass Grid) -->
+    <section class="cs-section" style="background: #09090e; border-top: 1px solid var(--cs-card-border);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <!-- Exact H2 for SEO -->
+            <h2 style="text-align: center; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; margin-bottom: 1rem; color: #fff; text-transform: uppercase;">
+                Experto en Diseño de Páginas Web
+            </h2>
+            <p style="text-align: center; color: #9ca3af; max-width: 600px; margin: 0 auto 3rem;">
+                Todo lo que incluye nuestro servicio para garantizar el máximo estándar técnico y comercial.
+            </p>
+
+            <div class="cs-expert-grid">
+                <!-- Item 1 -->
+                <div class="cs-expert-card gs-reveal">
+                    <div class="cs-expert-icon">✓</div>
+                    <h3>Sitios webs editables</h3>
+                    <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                        Paneles intuitivos donde puedes cambiar textos, imágenes o publicar entradas en tu blog sin depender de un desarrollador.
+                    </p>
                 </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3 style="text-transform: none; font-size: 1.1rem;">Velocidad de carga</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Optimizamos cada línea de código, comprimimos imágenes y prescindimos de plugins pesados para garantizar puntuaciones de 90+ en Google PageSpeed y carga inferior a 1 segundo.</p>
-                    </div>
+
+                <!-- Item 2 -->
+                <div class="cs-expert-card gs-reveal">
+                    <div class="cs-expert-icon">⚡</div>
+                    <h3>Velocidad de carga</h3>
+                    <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                        Tiempos inferiores a 1 segundo que elevan la retención de usuarios e impulsan las mejores valoraciones en Google PageSpeed (90+).
+                    </p>
                 </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3 style="text-transform: none; font-size: 1.1rem;">Compromiso contigo</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Trato directo de persona a persona en Castellón. Te acompañamos desde el briefing inicial hasta la puesta en marcha con comunicación transparente en todo momento.</p>
-                    </div>
+
+                <!-- Item 3 -->
+                <div class="cs-expert-card gs-reveal">
+                    <div class="cs-expert-icon">🤝</div>
+                    <h3>Compromiso contigo</h3>
+                    <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                        Comunicación transparente, soporte directo en Castellón de la Plana y resolución ágil de cualquier duda técnica.
+                    </p>
                 </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3 style="text-transform: none; font-size: 1.1rem;">Todos mis sitios web incluyen SEO</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Estructura semántica HTML5, datos enriquecidos Schema.org, metadatos orientados a conversión e indexación óptima para competir por palabras clave estratégicas en Castellón.</p>
-                    </div>
+
+                <!-- Item 4 -->
+                <div class="cs-expert-card gs-reveal">
+                    <div class="cs-expert-icon">🎯</div>
+                    <h3>Todos mis sitios web incluyen SEO</h3>
+                    <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                        Estructura HTML5 semántica, metadatos calculados, mapas de sitio XML y optimización para búsquedas locales en Castellón.
+                    </p>
                 </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3 style="text-transform: none; font-size: 1.1rem;">¿Cómo trabajo el UX en los proyectos web?</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Diseñamos cada pantalla pensando en el usuario móvil: jerarquía visual clara, llamadas a la acción directas y formularios accesibles para maximizar el contacto inmediato.</p>
-                    </div>
+
+                <!-- Item 5 -->
+                <div class="cs-expert-card gs-reveal">
+                    <div class="cs-expert-icon">📱</div>
+                    <h3>¿Cómo trabajo el UX en los proyectos web?</h3>
+                    <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                        Diseñamos flujos pensados en el usuario móvil: botones accesibles con un solo pulgar, tipografía legible y cero distracciones.
+                    </p>
                 </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3 style="text-transform: none; font-size: 1.1rem;">Ofrecemos la gama de opciones que necesitas</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Desde landing pages de captación urgente hasta webs corporativas de alta gama, tiendas online conectadas a pasarelas de pago y automatizaciones con WhatsApp o IA.</p>
-                    </div>
+
+                <!-- Item 6 -->
+                <div class="cs-expert-card gs-reveal">
+                    <div class="cs-expert-icon">⚙️</div>
+                    <h3>Ofrecemos la gama de opciones que necesitas</h3>
+                    <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                        Desde páginas de aterrizaje (landing pages) para campañas de Google Ads hasta portales corporativos y tiendas online complejas.
+                    </p>
                 </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3 style="text-transform: none; font-size: 1.1rem;">RGPD</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Implementación rigurosa de las normativas de privacidad vigentes: consentimiento de cookies, formularios seguros con SSL y textos legales adaptados a la normativa europea.</p>
-                    </div>
+
+                <!-- Item 7 -->
+                <div class="cs-expert-card gs-reveal">
+                    <div class="cs-expert-icon">🔒</div>
+                    <h3>RGPD</h3>
+                    <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                        Cumplimiento legal europeo garantizado: banners de cookies configurados, política de privacidad y formularios conformes.
+                    </p>
                 </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <h3 style="text-transform: none; font-size: 1.1rem;">Facturación</h3>
-                    </div>
-                    <div class="accordion-body">
-                        <p>Presupuestos claros y cerrados desde el primer día, sin costes ocultos ni sorpresas, con opciones de pago fraccionado para facilitar el impulso digital de tu negocio.</p>
-                    </div>
+
+                <!-- Item 8 -->
+                <div class="cs-expert-card gs-reveal">
+                    <div class="cs-expert-icon">💳</div>
+                    <h3>Facturación</h3>
+                    <p style="font-size: 0.95rem; color: #9ca3af; line-height: 1.6;">
+                        Presupuestos cerrados por contrato, sin cargos sorpresa y con opciones de pago fraccionado adaptadas a autónomos y pymes.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mid CTA -->
-    <section class="cta-mid" style="padding: 5rem 0; text-align: center; background-color: var(--color-primary); color: white;">
-        <div class="container">
-            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Pide tu nueva página web a medida</h2>
-            <h3 style="color: rgba(255,255,255,0.9); margin-bottom: 2rem; font-size: 1.5rem;">¡Ya es hora de un cambio!</h3>
-            <a href="#contacto" class="btn-primary" style="background-color: white; color: black; font-weight: bold;">Empezar ahora</a>
+    <!-- 9. Mid CTA (Glowing Dark Banner) -->
+    <section class="cs-section" style="padding: 5rem 1.5rem; background: #07070b;">
+        <div class="cs-cta-banner gs-reveal">
+            <span style="color: #f8b54a; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; display: block; margin-bottom: 1rem;">
+                DISPONIBILIDAD LIMITADA ESTE MES
+            </span>
+            
+            <!-- Exact H2 for SEO -->
+            <h2 style="color: #fff; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; margin-bottom: 1rem; line-height: 1.2;">
+                Pide tu nueva página web a medida
+            </h2>
+
+            <!-- Exact H3 for SEO -->
+            <h3 style="color: #9ca3af; margin-bottom: 2.5rem; font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 500;">
+                ¡Ya es hora de un cambio!
+            </h3>
+
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="#contacto" class="cs-btn-glow" style="font-size: 1.1rem; padding: 1.1rem 2.5rem;">
+                    Empezar ahora <span>→</span>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=34687180231" target="_blank" rel="noopener noreferrer" class="cs-btn-glass" style="font-size: 1.1rem; padding: 1.1rem 2.5rem;">
+                    Hablar por WhatsApp
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- 9. Portfolio Carousel -->
+    <!-- 10. Portfolio Carousel -->
     <include src="components/castellon-portfolio.html"></include>
 
-    <!-- 10. Contact Form (Home) -->
-    <section class="contact" id="contacto">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem;">Contacta con nuestra agencia de diseño web</h2>
-        <h3 class="h2" style="font-size:1.5rem; color:var(--color-primary);">contacto</h3>
-        <form class="contact-form" action="/send_mail.php" method="POST">
-            <input type="text" name="nombre" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="asunto" placeholder="Asunto" required>
-            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-            <div class="legal-consent" style="margin-bottom: 1.5rem; text-align: left; font-size: 0.65rem; color: var(--color-text-light); line-height: 1.4;">
-                <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
-                    <input type="checkbox" name="legal_accept" required style="margin-top: 0.25rem;">
-                    <span>He leído y acepto la <a href="/privacidad" target="_blank" style="text-decoration: underline; color: inherit;">Política de Privacidad</a>.</span>
-                </label>
+    <!-- 11. Contact Section (Split Modern Form) -->
+    <section class="cs-section contact" id="contacto" style="background: #09090e; border-top: 1px solid var(--cs-card-border);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 3.5rem;">
+                <!-- Exact H2 for SEO -->
+                <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 0.5rem; color: #fff;">
+                    Contacta con nuestra agencia de diseño web
+                </h2>
+                <!-- Exact H3 for SEO -->
+                <h3 class="h2" style="font-size: 1.4rem; color: var(--color-primary); font-weight: 600;">
+                    contacto
+                </h3>
             </div>
-            <button type="submit" class="btn-submit">Enviar Mensaje</button>
-        </form>
+
+            <div class="cs-contact-split">
+                <!-- Info Column -->
+                <div class="cs-glass-panel gs-reveal-left">
+                    <div style="font-size: 1.5rem; color: #fff; font-weight: 800; margin-bottom: 1.5rem;">
+                        ¿Hablamos de tu proyecto en Castellón?
+                    </div>
+                    <p style="color: #9ca3af; line-height: 1.7; margin-bottom: 2rem;">
+                        Rellena el formulario o escríbenos directamente. Analizaremos tu web actual o tu nueva idea de negocio y te enviaremos una propuesta detallada en menos de 24 horas.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="cs-expert-icon" style="width: 40px; height: 40px; font-size: 1.1rem;">📍</div>
+                            <div>
+                                <div style="font-size: 0.8rem; color: #9ca3af; text-transform: uppercase;">Ubicación Física</div>
+                                <div style="font-weight: 600; color: #fff;">Castellón de la Plana, España</div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="cs-expert-icon" style="width: 40px; height: 40px; font-size: 1.1rem;">📞</div>
+                            <div>
+                                <div style="font-size: 0.8rem; color: #9ca3af; text-transform: uppercase;">Teléfono / WhatsApp</div>
+                                <a href="tel:+34687180231" style="font-weight: 600; color: #fff; text-decoration: none;">+34 687 18 02 31</a>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="cs-expert-icon" style="width: 40px; height: 40px; font-size: 1.1rem;">⚡</div>
+                            <div>
+                                <div style="font-size: 0.8rem; color: #9ca3af; text-transform: uppercase;">Tiempo de Respuesta</div>
+                                <div style="font-weight: 600; color: #25D366;">Menos de 2 horas en horario laboral</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="cs-glass-panel gs-reveal-right">
+                    <form class="contact-form" action="/send_mail.php" method="POST" style="margin: 0; padding: 0;">
+                        <input type="text" name="nombre" placeholder="Nombre completo o Empresa" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--cs-card-border); color: #fff;">
+                        <input type="email" name="email" placeholder="Correo electrónico de contacto" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--cs-card-border); color: #fff;">
+                        <input type="text" name="asunto" placeholder="¿Qué tipo de web necesitas? (Corporativa, Tienda, Rediseño...)" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--cs-card-border); color: #fff;">
+                        <textarea name="mensaje" placeholder="Cuéntanos sobre tu negocio en Castellón y tus objetivos..." required style="background: rgba(255,255,255,0.05); border: 1px solid var(--cs-card-border); color: #fff; height: 130px;"></textarea>
+                        
+                        <div class="legal-consent" style="margin-bottom: 1.5rem; text-align: left; font-size: 0.75rem; color: #9ca3af; line-height: 1.4;">
+                            <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                                <input type="checkbox" name="legal_accept" required style="margin-top: 0.2rem;">
+                                <span>He leído y acepto la <a href="/privacidad" target="_blank" style="text-decoration: underline; color: #fff;">Política de Privacidad</a>.</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="cs-btn-glow" style="width: 100%; justify-content: center; cursor: pointer; font-size: 1.05rem;">
+                            Enviar Mensaje y Recibir Presupuesto
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- 13. FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <h2>Diseño web con tarifas a medida en Castellón</h2>
-            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--color-text-light); font-size: 1.2rem; font-weight: 400;">Tarifas adaptadas a cualquier proyecto</h2>
+    <!-- 12. FAQ Section (Clean Glass Accordion) -->
+    <section class="cs-section faq" style="background: #07070b; border-top: 1px solid var(--cs-card-border);">
+        <div class="container" style="max-width: 900px; margin: 0 auto;">
+            <!-- Exact H2 for SEO -->
+            <h2 style="text-align: center; font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 900; margin-bottom: 0.75rem; color: #fff;">
+                Diseño web con tarifas a medida en Castellón
+            </h2>
+            
+            <!-- Exact H2 for SEO -->
+            <h2 style="text-align: center; margin-bottom: 3rem; color: #9ca3af; font-size: 1.2rem; font-weight: 400;">
+                Tarifas adaptadas a cualquier proyecto
+            </h2>
+
             <div class="accordion">
-                <div class="accordion-item">
-                    <div class="accordion-header">¿Cuánto cuesta el diseño de una página web en Castellón?</div>
-                    <div class="accordion-body">
+                <div class="accordion-item" style="background: rgba(18,18,24,0.7); border: 1px solid var(--cs-card-border); border-radius: 1rem; margin-bottom: 1rem; overflow: hidden;">
+                    <div class="accordion-header" style="color: #fff; font-weight: 700; padding: 1.4rem; cursor: pointer;">
+                        ¿Cuánto cuesta el diseño de una página web en Castellón?
+                    </div>
+                    <div class="accordion-body" style="padding: 0 1.4rem 1.4rem; color: #9ca3af; line-height: 1.6;">
                         <p>El precio depende de las necesidades del negocio. Una web corporativa para profesionales y pymes parte de los 400€ a 700€, mientras que tiendas online o plataformas a medida suelen estar entre 900€ y 2500€. Proporcionamos presupuestos cerrados y adaptados al retorno real que esperas conseguir.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">¿Cuánto tiempo tarda el desarrollo web y posicionamiento SEO?</div>
-                    <div class="accordion-body">
+
+                <div class="accordion-item" style="background: rgba(18,18,24,0.7); border: 1px solid var(--cs-card-border); border-radius: 1rem; margin-bottom: 1rem; overflow: hidden;">
+                    <div class="accordion-header" style="color: #fff; font-weight: 700; padding: 1.4rem; cursor: pointer;">
+                        ¿Cuánto tiempo tarda el desarrollo web y posicionamiento SEO?
+                    </div>
+                    <div class="accordion-body" style="padding: 0 1.4rem 1.4rem; color: #9ca3af; line-height: 1.6;">
                         <p>La mayoría de los proyectos quedan completados entre 2 y 6 semanas según la complejidad y el volumen de contenidos. Mantenemos revisiones constantes y entregas parciales para que apruebes cada etapa antes del despliegue en producción.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">¿Cómo mejora mi posicionamiento SEO en Castellón y Google?</div>
-                    <div class="accordion-body">
+
+                <div class="accordion-item" style="background: rgba(18,18,24,0.7); border: 1px solid var(--cs-card-border); border-radius: 1rem; margin-bottom: 1rem; overflow: hidden;">
+                    <div class="accordion-header" style="color: #fff; font-weight: 700; padding: 1.4rem; cursor: pointer;">
+                        ¿Cómo mejora mi posicionamiento SEO en Castellón y Google?
+                    </div>
+                    <div class="accordion-body" style="padding: 0 1.4rem 1.4rem; color: #9ca3af; line-height: 1.6;">
                         <p>Estructuramos la web para que responda exactamente a lo que buscan tus clientes en Castellón y alrededores. Integramos etiquetas semánticas, enlazado interno estratégico, alta optimizada en Google Maps y tiempos de respuesta ultra-rápidos que el algoritmo premia con mejores rankings.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">¿Podré gestionar mi página web yo mismo?</div>
-                    <div class="accordion-body">
+
+                <div class="accordion-item" style="background: rgba(18,18,24,0.7); border: 1px solid var(--cs-card-border); border-radius: 1rem; margin-bottom: 1rem; overflow: hidden;">
+                    <div class="accordion-header" style="color: #fff; font-weight: 700; padding: 1.4rem; cursor: pointer;">
+                        ¿Podré gestionar mi página web yo mismo?
+                    </div>
+                    <div class="accordion-body" style="padding: 0 1.4rem 1.4rem; color: #9ca3af; line-height: 1.6;">
                         <p>Sí, al 100%. Te entregamos un panel de control intuitivo y una formación en vídeo para que puedas crear entradas de blog, cambiar textos, añadir productos y gestionar nuevos contactos de manera autónoma, sin depender mensualmente de un informático.</p>
                     </div>
                 </div>
@@ -337,24 +894,36 @@
         </div>
     </section>
 
-    <!-- 14. Parallax Banner -->
-    <section class="parallax-banner" style="background-image: url('/assets/mokko_parallax-scaled.jpg'); background-position: center; background-size: cover; flex-direction: column; justify-content: center; align-items: center; padding: 4rem 2rem;">
-        <h2 style="text-transform: uppercase; font-size: 2.5rem; margin-bottom: 1rem; color: white; text-align: center;">Herramientas premium que utilizo</h2>
-        <h3 style="font-size: 1.2rem; margin-top: 0.5rem; text-align: center; display: block; color: rgba(255,255,255,0.8); margin-bottom: 2rem;">Tecnologías de vanguardia para un rendimiento óptimo</h3>
-        <h4 style="font-size: 1.1rem; color: white; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-weight: 500;">
-            <span>React & Vite</span>
-            <span>•</span>
-            <span>WordPress Pro</span>
-            <span>•</span>
-            <span>GSAP Animations</span>
-            <span>•</span>
-            <span>Node.js</span>
-            <span>•</span>
-            <span>Three.js</span>
-        </h4>
+    <!-- 13. Parallax Banner & Tech Arsenal -->
+    <section class="parallax-banner" style="background-image: url('/assets/mokko_parallax-scaled.jpg'); background-position: center; background-size: cover; flex-direction: column; justify-content: center; align-items: center; padding: 5rem 2rem; position: relative;">
+        <div style="position: absolute; inset: 0; background: rgba(5,5,8,0.88);"></div>
+        <div style="position: relative; z-index: 2; text-align: center; max-width: 900px;">
+            <!-- Exact H2 for SEO -->
+            <h2 style="text-transform: uppercase; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 0.75rem; color: #fff;">
+                Herramientas premium que utilizo
+            </h2>
+            
+            <!-- Exact H3 for SEO -->
+            <h3 style="font-size: 1.25rem; text-align: center; display: block; color: #f8b54a; margin-bottom: 2.5rem; font-weight: 600;">
+                Tecnologías de vanguardia para un rendimiento óptimo
+            </h3>
+
+            <!-- Exact H4 for SEO -->
+            <h4 style="font-size: 1.15rem; color: #fff; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; font-weight: 600;">
+                <span style="background: rgba(255,255,255,0.06); padding: 0.5rem 1.2rem; border-radius: 9999px; border: 1px solid var(--cs-card-border);">React & Vite</span>
+                <span style="color: var(--color-primary);">•</span>
+                <span style="background: rgba(255,255,255,0.06); padding: 0.5rem 1.2rem; border-radius: 9999px; border: 1px solid var(--cs-card-border);">WordPress Pro</span>
+                <span style="color: var(--color-primary);">•</span>
+                <span style="background: rgba(255,255,255,0.06); padding: 0.5rem 1.2rem; border-radius: 9999px; border: 1px solid var(--cs-card-border);">GSAP Animations</span>
+                <span style="color: var(--color-primary);">•</span>
+                <span style="background: rgba(255,255,255,0.06); padding: 0.5rem 1.2rem; border-radius: 9999px; border: 1px solid var(--cs-card-border);">Node.js</span>
+                <span style="color: var(--color-primary);">•</span>
+                <span style="background: rgba(255,255,255,0.06); padding: 0.5rem 1.2rem; border-radius: 9999px; border: 1px solid var(--cs-card-border);">Three.js</span>
+            </h4>
+        </div>
     </section>
 
-    <!-- 15. Ticker -->
+    <!-- 14. Ticker -->
     <section class="ticker">
         <div class="ticker-track">
             <span>Un diseño web único</span>
@@ -368,13 +937,23 @@
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta" style="padding: 6rem 0; background-color: var(--color-bg);">
-        <div class="container">
-            <h2 style="text-align: center; margin-top: 0; font-size: 1.5rem;">Diseño web en Castellón desarrollo de webs a tu medida</h2>
-            <h2 style="text-align: center; margin-top: 1rem; color: var(--color-primary); font-size: 1.2rem; margin-bottom: 2rem;">¿Todavía no sabes que plan te conviene?</h2>
-            <div style="text-align: center;">
-                <a href="#contacto" class="btn-primary" style="display: inline-block; border: 1px solid">Contactar con un experto</a>
+    <!-- 15. Final CTA -->
+    <section class="final-cta" style="padding: 6rem 1.5rem; background-color: #07070b; text-align: center; border-top: 1px solid var(--cs-card-border);">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <!-- Exact H2 for SEO -->
+            <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; margin-bottom: 0.75rem; color: #fff;">
+                Diseño web en Castellón desarrollo de webs a tu medida
+            </h2>
+            
+            <!-- Exact H2 for SEO -->
+            <h2 style="color: var(--color-primary); font-size: clamp(1.2rem, 2.5vw, 1.5rem); margin-bottom: 2.5rem; font-weight: 600;">
+                ¿Todavía no sabes que plan te conviene?
+            </h2>
+
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="#contacto" class="cs-btn-glow" style="font-size: 1.1rem; padding: 1.1rem 2.5rem;">
+                    Contactar con un experto
+                </a>
             </div>
         </div>
     </section>
