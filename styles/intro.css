@@ -23,6 +23,6 @@
 @media (max-width: 900px) {
   .orb-grid { grid-template-columns: 1fr; text-align: center; }
 }
-.orb-text { font-size: 1.1rem; line-height: 1.8; color: #333; }
+.orb-text { font-size: 1.1rem; line-height: 1.8; color: #333; opacity: 1; }
 .orb-text p { margin-bottom: 1.5rem; }
 .orb-text strong { color: #000; }

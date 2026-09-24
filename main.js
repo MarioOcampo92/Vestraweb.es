@@ -13,25 +13,7 @@ function loadScript(src) {
   });
 }
 
-// 1. FAST NATIVE REVEALS (Instant GPU transitions without waiting for external JS)
-function initNativeFastReveals() {
-  const reveals = document.querySelectorAll('.gs-reveal, .gs-reveal-left, .gs-reveal-right, .gs-reveal-scale');
-  if ('IntersectionObserver' in window && reveals.length > 0) {
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-revealed');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '60px' });
-    reveals.forEach(el => obs.observe(el));
-  } else {
-    reveals.forEach(el => el.classList.add('is-revealed'));
-  }
-}
-
-// 2. CORE INTERACTIVE UI (Available immediately on DOM ready)
+// 1. CORE INTERACTIVE UI (Available immediately on DOM ready)
 function initCoreUI() {
   // Mobile Menu Toggle
   const hamburgerBtn = document.querySelector('.hamburger-icon-btn');
@@ -149,6 +131,35 @@ function setupGsap() {
 
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
     gsap.registerPlugin(ScrollTrigger);
+
+    // Scroll-triggered reveals
+    document.querySelectorAll('.gs-reveal').forEach(el => {
+      gsap.to(el, {
+        scrollTrigger: { trigger: el, start: "top 88%", toggleActions: "play none none reverse" },
+        opacity: 1, y: 0, duration: 1, ease: "power3.out"
+      });
+    });
+
+    document.querySelectorAll('.gs-reveal-left').forEach(el => {
+      gsap.to(el, {
+        scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none reverse" },
+        opacity: 1, x: 0, duration: 1.2, ease: "power3.out"
+      });
+    });
+
+    document.querySelectorAll('.gs-reveal-right').forEach(el => {
+      gsap.to(el, {
+        scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none reverse" },
+        opacity: 1, x: 0, duration: 1.2, ease: "power3.out"
+      });
+    });
+
+    document.querySelectorAll('.gs-reveal-scale').forEach(el => {
+      gsap.to(el, {
+        scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none reverse" },
+        opacity: 1, scale: 1, duration: 1, ease: "power3.out"
+      });
+    });
 
     // Staggered cards
     const staggerElements = gsap.utils.toArray('.project-card, .blog-card, .step, .service-card, .process-step, .slider-item');
@@ -316,7 +327,7 @@ function initThreeSphere(canvasContainer) {
       
       tl.to(wireShape.scale, { x: 3, y: 3, z: 3, duration: 1 })
         .to(particleMesh.scale, { x: 3, y: 3, z: 3, duration: 1 }, '<')
-        .to('.orb-text', { opacity: 0, x: 50, duration: 1 })
+        .fromTo('.orb-text', { opacity: 1, x: 0 }, { opacity: 0, x: 50, duration: 1, immediateRender: false })
         .to(wireShape.scale, { x: 30, y: 30, z: 30, duration: 2 }, '<')
         .to(particleMesh.scale, { x: 30, y: 30, z: 30, duration: 2 }, '<')
         .to(particlesMaterial, { opacity: 0, duration: 1 });
@@ -404,30 +415,17 @@ function initContactForms() {
 
 // ===== LIFECYCLE INITIALIZATION =====
 document.addEventListener("DOMContentLoaded", () => {
-  initNativeFastReveals();
   initCoreUI();
   initContactForms();
   setupThreeJsLazy();
 });
 
 window.addEventListener("load", () => {
-  // Start GSAP & VanillaTilt on idle or first scroll
-  const onInteraction = () => {
-    ['scroll', 'touchstart', 'mousemove', 'wheel'].forEach(evt => window.removeEventListener(evt, onInteraction, { passive: true }));
+  const initAll = () => {
+    ['scroll', 'touchstart', 'mousemove', 'wheel'].forEach(evt => window.removeEventListener(evt, initAll, { passive: true }));
     setupGsap();
     setupVanillaTilt();
   };
-  ['scroll', 'touchstart', 'mousemove', 'wheel'].forEach(evt => window.addEventListener(evt, onInteraction, { passive: true, once: true }));
-
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(() => {
-      setupGsap();
-      setupVanillaTilt();
-    }, { timeout: 2000 });
-  } else {
-    setTimeout(() => {
-      setupGsap();
-      setupVanillaTilt();
-    }, 1500);
-  }
+  ['scroll', 'touchstart', 'mousemove', 'wheel'].forEach(evt => window.addEventListener(evt, initAll, { passive: true, once: true }));
+  setTimeout(initAll, 200);
 });
